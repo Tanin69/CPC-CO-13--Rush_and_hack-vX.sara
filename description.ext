@@ -1,0 +1,101 @@
+//overViewPicture       = "loadScreen.jpg";
+//overViewPictureLocked = "loadScreen.jpg";
+
+
+// - Texte de description
+overviewText = "Rush and hack";
+overviewTextLocked = "";
+
+// - Author
+author = "tanin69"; 
+
+class Params
+{
+	class delayBeforeRush
+	{
+		title = "Délai avant le départ du rush des ennemis";
+		texts[] = {"Aucun délai","2 minutes","4 minutes", "6 minutes"};
+		values[] = {0,120,240,360};
+		default = 0;
+	};
+};
+
+// - Type de mission (informatif)
+class Header
+{
+	gameType = Coop; // MP mission type
+	minPlayers = 8;
+	maxPlayers = 13;
+};
+
+// Affichage durant l'écran de chargement
+// - Nom de la mission
+onLoadName = "Rush and hack"; 
+// - Texte de description
+onLoadMission = "Cours, Forest !";
+// - Image
+loadScreen = "loadScreen.jpg";
+
+// Autres paramètres de la mission
+enableDebugConsole = 1;
+saving = 0;
+
+allowFunctionsRecompile = 1;
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };	
+	};
+	
+};
+
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
+};
+
+class CfgFunctions 
+{
+	#include "vcom\cfgFunctions.hpp"
+	#include "Cfg\cfgFunctions.hpp"
+	#include "functions\external\LARs\spawnComp\functions\functions.hpp"
+};
+
+class CfgCompositions {
+    
+	class container_computer {
+		#include "compositions\container_computer.sqe"
+	};
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission réussie !";
+		subtitle = "";
+		description = "Vous avez dit ce que vous alliez faire, vous avez fait ce que vous avez dit... Et vous êtes vivant(s).";
+		pictureBackground = "";
+		picture = "fail.jpg";
+		//pictureColor[] = {1,0.8,0.0,1};
+	};
+
+	class End2
+	{
+		title = "C'est un échec !";
+		subtitle = "";
+		description = "Vous ferez mieux la prochaine fois.";
+		pictureBackground = "";
+		picture = "fail.jpg";
+		//pictureColor[] = {0.6,0.1,0.2,1};
+	};
+};

@@ -1,0 +1,81 @@
+version=54;
+center[]={13762.03,29.73525,12848.676};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Build";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.78320313,1.20924,0.37304688};
+					angles[]={0,4.625123,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=98;
+				type="Misc_Cargo1Bo_military";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.88769531,1.262085,-0.12890625};
+					angles[]={0,2.8797932,0};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					name="computer";
+				};
+				id=114;
+				type="Land_MultiScreenComputer_01_black_F";
+				atlOffset=0.00027275085;
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.0595703,0.27914429,-0.15332031};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=115;
+				type="Land_PortableCabinet_01_closed_olive_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.95410156,0.55944252,-0.090820313};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=113;
+				type="Land_PortableDesk_01_black_F";
+			};
+		};
+		id=132;
+		atlOffset=-0.32865715;
+	};
+};
