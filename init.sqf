@@ -1,5 +1,5 @@
 [] spawn VCM_fnc_VcomInit;
-[2,"marker_spawn_ENI",true,600.0,false,3600.0,true,true,"COLONEL"] call GDC_fnc_lucyInit;
+[2,"marker_spawn_AI",true,600.0,false,3600.0,true,true,"COLONEL"] call GDC_fnc_lucyInit;
 
 //Lance le briefing
 execVM "briefing.sqf";
@@ -9,7 +9,6 @@ execVM "briefing.sqf";
 	isHackable = false;
 	seizedByENI = false;
 	goRush = false;
-	delayBeforeRush = ["delayBeforeRush",0] call BIS_fnc_getParamValue;
 
 /* Initialisation des variables globales */
 

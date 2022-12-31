@@ -8,5 +8,6 @@ while {seizedByENI && duration < 300 } do {
 };
 if (duration >= 300) then {
 	isHackable= false;
+	publicVariable "isHackable";
 	"L'ennemi est parvenu à détruire les données. Echec mission : procédez à l'extraction." remoteExec ["hint"];
 };

@@ -1,0 +1,45 @@
+version=54;
+center[]={14181.04,39.996998,12589.792};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Build";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Layer";
+				name="Spot_1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={0,3.9768028,0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="this addAction [""Fin de partie"",{[""MyEnding"", true, 3] remoteExec [""BIS_fnc_endMission"", 0, true];}]";
+						};
+						id=131;
+						type="Flag_Red_F";
+						atlOffset=0.00020599365;
+					};
+				};
+				id=458;
+				atlOffset=-0.30762672;
+			};
+		};
+		id=132;
+		atlOffset=29.332794;
+	};
+};

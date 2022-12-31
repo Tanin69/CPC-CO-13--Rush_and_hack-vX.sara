@@ -11,13 +11,7 @@ author = "tanin69";
 
 class Params
 {
-	class delayBeforeRush
-	{
-		title = "Délai avant le départ du rush des ennemis";
-		texts[] = {"Aucun délai","2 minutes","4 minutes", "6 minutes"};
-		values[] = {0,120,240,360};
-		default = 0;
-	};
+
 };
 
 // - Type de mission (informatif)
@@ -75,9 +69,18 @@ class CfgCompositions {
 	class container_computer {
 		#include "compositions\container_computer.sqe"
 	};
+
+	class simple_checkpoint {
+		#include "compositions\simple_checkpoint.sqe"
+	};
+
+	class extraction_position {
+		#include "compositions\extraction_position.sqe"
+	};
 };
 
 class CfgDebriefing
+	
 {  
 	class End1
 	{
