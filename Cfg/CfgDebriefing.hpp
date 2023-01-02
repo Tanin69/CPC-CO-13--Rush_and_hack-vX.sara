@@ -1,6 +1,6 @@
 class CfgDebriefing
 {  
-	class End1
+	class tEnd1
 	{
 		title = "Mission réussie !";
 		subtitle = "";
@@ -10,7 +10,7 @@ class CfgDebriefing
 		pictureColor[] = {1,0.8,0.0,1};
 	};
 
-	class End2
+	class tEnd2
 	{
 		title = "C'est un échec !";
 		subtitle = "";

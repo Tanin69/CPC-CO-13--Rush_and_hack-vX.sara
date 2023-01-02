@@ -1,8 +1,32 @@
 /* Build mission environnement */
 
-//_mission data is a complex array that contains all mission data : objectives (#0), spawn point, paths, point of interest, etc. for one spawn point (#1), the same data for the second spawn point (#2) and extract point data (#3)
+// mission data is a complex array that contains all mission data : objectives (#0), spawn point, paths, point of interest, etc. for one spawn point (#1), the same data for the second spawn point (#2) and extract point data (#3)
+// mission data is now initialized from a config file
+//TODO : replace the missionDataArray with variables
+
+missionData = [];
+private _spawnData = [];
+private _objData = [];
+//private _combatZone = "Masbete";
+private _combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete"];
+
+{_objData pushBack ((missionConfigFile >> "cfgCombatZones" >> _combatZone >> "Objectives" >> _x) call BIS_fnc_getCfgData)} forEach ["objectivePos","heavyWeaponPos","heavyWeaponClassname"];
+missionData pushBack _objData;
+{_spawnData pushBack (getArray (missionConfigFile >> "cfgCombatZones" >> _combatZone >> "SpawnPoints" >> "SpawnPoint_1" >> _x));} forEach ["spawnPos","paths","pointsOfInterest","heliSpawnPos","paradropPos"];
+missionData pushBack _spawnData;
+_spawnData = [];
+{_spawnData pushBack (getArray (missionConfigFile >> "cfgCombatZones" >> _combatZone >> "SpawnPoints" >> "SpawnPoint_2" >> _x));} forEach ["spawnPos","paths","pointsOfInterest","heliSpawnPos","paradropPos"];
+missionData pushBack _spawnData;
+missionData pushBack (getArray (missionConfigFile >> "cfgCombatZones" >> _combatZone >> "Extraction" >> "extractionPos"));
+
+/*
 missionData = [
-	[[13761.2,12849,0],[13745.6,12727.8,0],[13702.3,12737.4,0]], //Objective data : possible positions for objective to be spawned
+	[ //Objective data : possible positions for objective to be spawned
+		[13761.2,12849,0],[13745.6,12727.8,0],[13702.3,12737.4,0], //Objective possible positions
+		[13761.2,12849,0],[13745.6,12727.8,0],[13702.3,12737.4,0], //Heavy weapon possible positions
+		"CUP_O_KORD_high_RU_M_MSV", //Heavy weapon classname
+
+	], 
 	[ //Spawn point #1 data 
 		[13144.9,13414.6,200], //spawn point position (#2 is direction)
 		[ //paths for groups to rush the combat zone
@@ -66,10 +90,15 @@ missionData = [
 		[13264.7,12881.6]
 	]
 ];
+*/
 
 publicVariable "missionData"; //We need to broadcast the missionData array because units are spawned on the HC
 
 //Randomly choose between spawn point for players and AI
+/* Test only
+	iPlayers = 1;
+	iAI = 2;
+*/
 iPlayers = selectRandom [1,2];
 iAI = 0;
 if (iPlayers isEqualTo 1) then {
@@ -77,12 +106,13 @@ if (iPlayers isEqualTo 1) then {
 } else {
 	iAI = 1
 };
-
 publicVariable "iAI";
 
 /* build objective */
 
-	private _objectivePos = missionData#0;
+	"marker_zone" setMarkerPos (getArray (missionConfigFile >> "cfgCombatZones" >> _combatZone >> "Objectives" >> "combatZone"));
+
+	private _objectivePos = missionData#0#0;
 
 	//place visual markers
 	for "_i" from 0 to (count _objectivePos) -1 do  {
@@ -92,21 +122,25 @@ publicVariable "iAI";
 	};
 	
 	//Place the container and the computer - LARS spawn composition scripts : https://forums.bohemia.net/forums/topic/191902-eden-composition-spawning/
-	objectivePos = selectRandom _objectivePos;
+	objectivePos = _objectivePos#2;
+	//objectivePos = selectRandom _objectivePos;
 	publicVariable "objectivePos";
-
-	private _compReference = ["container_computer", [objectivePos#0,objectivePos#1,0]] call LARs_fnc_spawnComp;
+	private _compReference = ["container_computer", [objectivePos#0,objectivePos#1,0],nil,objectivePos#2] call LARs_fnc_spawnComp;
 
 	//Add triggers for hacking management
 	private _trg = createTrigger ["EmptyDetector", objectivePos];
 	_trg setTriggerArea [20, 20, 0, false, 0];
 	_trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
 	_trg setTriggerStatements ["this", "systemChat 'Les joueurs ont pris le contrôle de la zone du PC';seizedByAMI = true;isHackable = true;publicVariable 'seizedByAMI';publicVariable 'isHackable'", "systemChat 'Les joueurs ont perdu le contrôle de la zone du PC';seizedByAMI = false;isHackable = false;publicVariable 'seizedByAMI';publicVariable 'isHackable'"];
-
 	_trg = createTrigger ["EmptyDetector", objectivePos];
 	_trg setTriggerArea [20, 20, 0, false, 0];
 	_trg setTriggerActivation ["EAST SEIZED", "PRESENT", true];
 	_trg setTriggerStatements ["this", "'La zone du PC est contrôlée par les hostiles !' remoteExec ['systemChat'];seizedByENI = true;isHackable = false;publicVariable 'seizedByENI';publicVariable 'isHackable';execVM 'functions\misc\fn_checkENI.sqf';", "'Les hostiles ont perdu le contrôle de la zone du PC !' remoteExec ['systemChat'];seizedByENI=false;isHackable = true;publicVariable 'seizedByENI';publicVariable 'isHackable'"];
+
+	//Add heavy Weapon
+	private _heavyWeaponPos = missionData#0#1;
+	private _heavyWeaponCls = missionData#0#2;
+	HeavyWeapon = createVehicle [_heavyWeaponCls, _heavyWeaponPos, [], 0, "NONE"];
 
 /* build objective */
 
@@ -120,9 +154,6 @@ publicVariable "iAI";
 
 /* build spawn points */
 
-	//The possible spawn positions and direction in #2
-	//private _spawnPosDir = (_missionData#2)#0;
-	
 	//players spawn point (based on a composition)
 	private _playerSpawnPos = (missionData#iPlayers)#0;
 	_compReference = ["simple_checkpoint", [_playerSpawnPos#0,_playerSpawnPos#1,0],nil,_playerSpawnPos#2] call LARs_fnc_spawnComp;

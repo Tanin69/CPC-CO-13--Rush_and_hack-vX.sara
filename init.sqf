@@ -56,7 +56,9 @@ execVM "briefing.sqf";
 	
 /* groups def */
 
-waituntil {time > 0}; //We have to wait initServer.sqf execution because we need 'computer' to be spawned (buidl.sqf executed by initServer.sqf)
+buildOk = false;
+
+waituntil {time > 0}; //We have to wait initServer.sqf execution because we need 'computer' to be spawned (build.sqf executed by initServer.sqf)
 
 //Add ACE action on the computer to hack (computer is dynamically created by build.sqf !)
 private _action_hack_computer = [
@@ -71,7 +73,6 @@ private _action_hack_computer = [
 ] call ace_interact_menu_fnc_createAction;
 
 [computer, 0, ["ACE_MainActions"], _action_hack_computer] call ace_interact_menu_fnc_addActionToObject;
-
 
 if (is3DENPreview) then {
 

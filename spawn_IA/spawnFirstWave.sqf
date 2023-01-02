@@ -26,7 +26,7 @@ switch (true) do {
 private _paths = (missionData#iAI)#1;
 
 private _reinfPath = {
-	params ["_grp", "_grpPath"];
+	params ["_grp", "_grpPath",["_lastWPType","SAD"],["_code",""]];
 
 	[
 		_grp,
@@ -35,10 +35,10 @@ private _reinfPath = {
 		[0,0,0],
 		["NORMAL","AWARE","YELLOW"],
 		"NO CHANGE",
-		"SAD",
+		_lastWPType,
 		["NORMAL","COMBAT","YELLOW"],
 		"NO CHANGE",
-		"",
+		_code,
 		0
 	] call GDC_fnc_lucyReinforcement;
 
@@ -59,10 +59,10 @@ _grpPath = selectRandom _paths + [_objectivePos];
 
 //--group that rush to take control of the heavy weapon
 _grp = [_spawnPos, _side, selectRandom _grpDef] call GDC_fnc_lucySpawnGroupInf;
-_grpPath = selectRandom _paths + [(getPos HeavyWeapon)];
-[_grp, _grpPath] call _reinfPath;
+_grpPath = selectRandom _paths + [getPos (HeavyWeapon)];
+[_grp, _grpPath,"GETIN NEAREST"] call _reinfPath;
 
-//--group with a marksman : go on one points of interest position
+//--group with a marksman : go on one point of interest position
 _grpDef = GROUPE_ENI_PETIT#0;
 _grp = [_spawnPos, _side, _grpDef] call GDC_fnc_lucySpawnGroupInf;
 _grpDest = [selectRandom (missionData#iAI#2)];

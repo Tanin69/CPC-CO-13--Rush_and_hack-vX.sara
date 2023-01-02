@@ -28,7 +28,7 @@ class items
 						flags=5;
 						class Attributes
 						{
-							init="this addAction [""Fin de partie"",{[""MyEnding"", true, 3] remoteExec [""BIS_fnc_endMission"", 0, true];}]";
+							init="this addAction [""Fin de partie"",{[""tEnd1"", true, 3] remoteExec [""BIS_fnc_endMission"", 0, true];}]";
 						};
 						id=131;
 						type="Flag_Red_F";

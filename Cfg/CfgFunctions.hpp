@@ -18,10 +18,6 @@ class int
 	class spawn_zone
 	{
 		file="functions\spawn_zone";
-		class Lambs_Spawn_Attack {};
-		class Lambs_Spawn_Attack_WP {};
-		class Lambs_Spawn_Garrison {};
-		class Lambs_Spawn_Patrol {};
 		class Spawn_Convoy {};
 		class Spawn_Convoy_Inf {};
 		class Spawn_Fixed_Weapons {};
