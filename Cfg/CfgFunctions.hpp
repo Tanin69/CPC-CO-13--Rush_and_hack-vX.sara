@@ -13,6 +13,7 @@ class int
 		class tracePath {};
 		class clearMarkersByPrefix {};
 		class getMarkerPosByText {};
+		class replaceInString {};
 	};
 
 	class spawn_zone
@@ -56,6 +57,16 @@ class int
 		class plutoHearing{};
 		class plutoSAD {};
 	};
+
+	class rush
+	{
+		file="functions\rush";
+		class build {};
+		class checkAMI {};
+		class checkENI {};
+		class spawnFirstWave {};
+		class spawnReinf {};
+	}
 
 };
 

@@ -13,8 +13,8 @@ class CfgCombatZones
 				{13702.3,12737.4,0}
 			};
 			heavyWeaponClassname = "CUP_B_M113A3_GER";
-			heavyWeaponPos[] = {13709.9,12760.7,-0.00499916};
-			combatZone[] = {13738.1,12760.3};
+			heavyWeaponPos[] = {{13709.9,12760.7,-0.00499916}};
+			combatZone[] = {{13738.1,12760.3}};
 		};
 		//Extraction point data
 		class Extraction
@@ -34,7 +34,7 @@ class CfgCombatZones
 			class SpawnPoint_1
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {13144.9,13414.6,200};
+				spawnPos[] = {{13144.9,13414.6,200}};				
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{13246.9,12881.6},{13587.1,12807.1}},
@@ -49,7 +49,7 @@ class CfgCombatZones
 					{13700,13022.7}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {16000,16009.8};
+				heliSpawnPos[] = {{16000,16009.8}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{13804.3,13110.5},
@@ -68,7 +68,7 @@ class CfgCombatZones
 			class SpawnPoint_2
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {14334.3,11947.5,300};
+				spawnPos[] = {{14334.3,11947.5,300}};
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{13954.6,12265.3},{13748.1,12479.3}},
@@ -83,7 +83,7 @@ class CfgCombatZones
 					{14000.6,12989.6}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {16000,16009.8};
+				heliSpawnPos[] = {{16000,16009.8}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{13804.3,13110.5},
@@ -112,9 +112,9 @@ class CfgCombatZones
 				{9755.76,8639.73,151.005},
 				{9728.35,8713.82,35.9836}
 			};
-			heavyWeaponPos[] = {9786.18,8704.79,3.9368};
+			heavyWeaponPos[] = {{9786.18,8704.79,3.9368}};
 			heavyWeaponClassname = "CUP_O_KORD_high_RU_M_MSV";
-			combatZone[] = {9776.36,8691.76};			
+			combatZone[] = {{9776.36,8691.76}};			
 		};
 		//Extraction point data
 		class Extraction
@@ -134,7 +134,7 @@ class CfgCombatZones
 			class SpawnPoint_1 //North position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {10133.8,9144.5,77};
+				spawnPos[] = {{10133.8,9144.5,77}};
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{9996.89,9134.67},{9788.8,8942.58},{9738.63,8812.46}},
@@ -147,7 +147,7 @@ class CfgCombatZones
 					{9991.37,8867.64,0}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {8438.61,11631.8};
+				heliSpawnPos[] = {{8438.61,11631.8}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{9706.59,9247.26},
@@ -159,7 +159,7 @@ class CfgCombatZones
 			class SpawnPoint_2 //South position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {9150.87,8326.12,180}; //180
+				spawnPos[] = {{9150.87,8326.12,180}}; //180
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{9319.91,8440.3},{9316.58,8591.83}},
@@ -172,7 +172,7 @@ class CfgCombatZones
 					{9403.46,8658.05}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {16000,16009.8};
+				heliSpawnPos[] = {{16000,16009.8}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{9765.25,8362.22},
@@ -194,9 +194,9 @@ class CfgCombatZones
 				{10416.2,6170.95,90}, //[10416.2,6170.95,62.4818,0]
 				{10366.3,6129.96,82} //[10366.3,6129.96,63.9374,82]
 			};
-			heavyWeaponPos[] = {10403.5,6173.04,0};
+			heavyWeaponPos[] = {{10403.5,6173.04,0}};
 			heavyWeaponClassname = "CUP_O_BTR90_RU";
-			combatZone[] = {10383.9,6145.22};			
+			combatZone[] = {{10383.9,6145.22}};			
 		};
 		//Extraction point data
 		class Extraction
@@ -215,7 +215,7 @@ class CfgCombatZones
 			class SpawnPoint_1 //East position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {11260.3,6123.03,350}; //270
+				spawnPos[] = {{11260.3,6123.03,350}}; //270
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{11161.9,6151.44},{10663.2,6229.79}},
@@ -229,7 +229,7 @@ class CfgCombatZones
 					{10648.6,6666.96}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {10287.8,4147.87};
+				heliSpawnPos[] = {{10287.8,4147.87}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{10417.2,5881.91},
@@ -242,7 +242,7 @@ class CfgCombatZones
 			class SpawnPoint_2 //South position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {9502,6209.31,0}; //180
+				spawnPos[] = {{9502,6209.31,0}}; //180
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{9627.28,6246.99},{9745.08,6287.34}},
@@ -256,7 +256,7 @@ class CfgCombatZones
 					{9893.53,5826.71}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {10287.8,4147.87};
+				heliSpawnPos[] = {{10287.8,4147.87}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{10417.2,5881.91},
@@ -278,9 +278,9 @@ class CfgCombatZones
 				{17358.3,14239.6,330}, //[17358.3,14239.6,13.455,241]
 				{17209.2,14177.2,130} //[17209.2,14177.2,13.5497,130.984]
 			};
-			heavyWeaponPos[] = {17267.9,14231.6,0};
+			heavyWeaponPos[] = {{17267.9,14231.6,0}};
 			heavyWeaponClassname = "CUP_O_BRDM2_RUS";
-			combatZone[] = {17267.9,14231.6};			
+			combatZone[] = {{17267.9,14231.6}};			
 		};
 		//Extraction point data
 		class Extraction
@@ -300,7 +300,7 @@ class CfgCombatZones
 			class SpawnPoint_1 //East position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {18075.6,14455.5,340}; // 340, 260, 160, 70
+				spawnPos[] = {{18075.6,14455.5,340}}; // 340, 260, 160, 70
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{17996.9,14452},{17724.2,14068.6}},
@@ -315,7 +315,7 @@ class CfgCombatZones
 					{17154.4,13865.8}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {19537.8,12558.9};
+				heliSpawnPos[] = {{19537.8,12558.9}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{17473.8,13736},
@@ -327,7 +327,7 @@ class CfgCombatZones
 			class SpawnPoint_2 //South position
 			{
 				//Spawn position : beware ! third array element is for the composition direction !
-				spawnPos[] = {16559.6,13749.3,20};
+				spawnPos[] = {{16559.6,13749.3,20}};
 				//Various paths for IA progression to objective
 				paths[] = {
 					{{16695.9,13779.9},{16832.1,13950.3}},
@@ -341,7 +341,7 @@ class CfgCombatZones
 					{16999.4,13957.8}
 				};
 				//Spawn position for helicopter that will grop paratroopers reinforcement
-				heliSpawnPos[] = {19537.8,12558.9};
+				heliSpawnPos[] = {{19537.8,12558.9}};
 				//Possible paradrop positions
 				paradropPos[] = {
 					{17473.8,13736},
@@ -352,4 +352,38 @@ class CfgCombatZones
 			};
 		};
 	};
+	class Obregan
+	{
+		class Objectives
+		{
+			objectivePos[] = {{14667.7,10756.9,39.5},{14305.1,10925.5,35.375},{14427.2,10797.4,16.0581}};
+			heavyWeaponClassname = "CUP_B_M113A3_GER";
+			heavyWeaponPos[] = {{14442.6,10887.5,24.0537}};
+			combatZone[] = {{14399.7,10833.7,-2.64063}};
+		};
+		class Extraction
+		{
+			extractionPos[] = {{14718.7,10742.2,36.5063},{14391.7,11129.4,37.9307},{14298.5,10450.3,35.5541}};
+		};
+		class SpawnPoints
+		{
+			class SpawnPoint_1
+			{
+				spawnPos[] = {{14630.5,11621.9,80}};
+				paths[] = {{{14601.7,11474.7,44.4915},{14494,11328.5,41.788},{14412.3,11032.4,46.316}},{{14728,11204.8,50.9845},{14745.5,10961.6,50.4808}},{{14649.7,11460.7,46.7962},{14610.5,11231.6,48.3688},{14541.9,11055.3,46.622}}};
+				pointsOfInterest[] = {{14592,10988.5,52.9984}};
+				heliSpawnPos[] = {{12374.3,10612.2,0}};
+				paradropPos[] = {{14418.9,11216.2,43.9629},{14697.6,10945.3,49.6226},{14221.8,10802.7,37.2269},{14734.6,10662.3,49.3746}};
+			};
+			class SpawnPoint_2
+			{
+				spawnPos[] = {{14098.9,10054.3,120}};
+				paths[] = {{{14218.4,10343.6,45.6116},{14558.2,10459.8,63.4855},{14651.8,10650.3,50.9638}},{{14185.7,10345.9,44.0691},{14111.9,10568.6,20.4476},{14109.7,10930.1,35.6069}},{{14279.3,10325.3,51.0012},{14388.4,10578.4,49.5388},{14414.5,10698.2,43.8784}}};
+				pointsOfInterest[] = {{14251.3,10695.2,37.6214},{14448.3,10614.4,53.9367}};
+				heliSpawnPos[] = {{12373.4,10587,0}};
+				paradropPos[] = {{14143.3,10851.5,36.5132},{14190.2,11087.9,39.3214},{14569.1,10495.7,52.2864},{14820.6,10717.8,56.7034}};
+			};
+		};
+	};
 };
+

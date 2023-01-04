@@ -1,16 +1,19 @@
 /* Very basic perpetual reinforcements */
 
+waituntil {goRush};
+
 //sleep 60;
 sleep 300 + random 120;
 
 private _grpDef = GROUPE_ENI_GRAND;
 private _side = opfor;
-private _spawnPos = (missionData#iAI)#0;
+private _spawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "spawnPos");
+_spawnPos = _spawnPos#0;
 private _objectivePos = objectivePos;
 private _grp = objNull;
 
 //Paths for group progression
-private _paths = (missionData#iAI)#1;
+private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "paths");
 
 while {true} do {
 
@@ -37,8 +40,9 @@ while {true} do {
 		
 	} else {
 		
-		private _paradropPos = selectRandom (missionData#iAI#4);
-		private _heliSpawnPos = missionData#iAI#3;
+		private _paradropPos = selectRandom (getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "paradropPos"));
+		private _heliSpawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "heliSpawnPos");
+		_heliSpawnPos = _heliSpawnPos#0;
 		_grp = [
 			_heliSpawnPos,
 			_paradropPos,
@@ -48,11 +52,11 @@ while {true} do {
 			selectRandom _grpDef,
 			"FULL"
 		]  call GDC_fnc_lucySpawnGroupInfParadrop;
-		
 		_grp = _grp#0;
-		_grpPath = [selectRandom[getMarkerPos "marker_objectif_1",getMarkerPos "marker_objectif_2",getMarkerPos "marker_objectif_3"]] + [selectRandom (missionData#3)];
+		//groups will patrol between random objective and random extraction point
+		private _rdmExtract = selectRandom (getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "Extraction" >> "extractionPos"));
+		_grpPath = [selectRandom[getMarkerPos "marker_objectif_1",getMarkerPos "marker_objectif_2",getMarkerPos "marker_objectif_3"]] + [_rdmExtract];
 		[_grp,_grpPath,["MOVE","NORMAL","AWARE","YELLOW","VEE"]] call GDC_fnc_lucyGroupRandomPatrol;
-		
 	};
 
 	//sleep 10;

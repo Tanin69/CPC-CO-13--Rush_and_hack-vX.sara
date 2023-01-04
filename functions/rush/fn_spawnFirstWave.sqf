@@ -3,7 +3,8 @@
 private _nbGroups = 2;
 private _grpDef = GROUPE_ENI_GRAND;
 private _side = opfor;
-private _spawnPos = (missionData#iAI)#0;
+private _spawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "spawnPos");
+_spawnPos = _spawnPos#0;
 private _objectivePos = objectivePos;
 private _grp = objNull;
 private _grpPath = [];
@@ -21,9 +22,6 @@ switch (true) do {
 		_nbGroups = 6;
 	};
 };
-
-//Paths for group progression
-private _paths = (missionData#iAI)#1;
 
 private _reinfPath = {
 	params ["_grp", "_grpPath",["_lastWPType","SAD"],["_code",""]];
@@ -43,6 +41,9 @@ private _reinfPath = {
 	] call GDC_fnc_lucyReinforcement;
 
 };
+
+//Paths for group progression
+private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "paths");
 
 //Spawn random groups
 for "_i" from 1 to _nbGroups do {
@@ -65,6 +66,7 @@ _grpPath = selectRandom _paths + [getPos (HeavyWeapon)];
 //--group with a marksman : go on one point of interest position
 _grpDef = GROUPE_ENI_PETIT#0;
 _grp = [_spawnPos, _side, _grpDef] call GDC_fnc_lucySpawnGroupInf;
-_grpDest = [selectRandom (missionData#iAI#2)];
-_grpPath = selectRandom _paths + _grpDest;
+_grpDest = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "pointsOfInterest");
+_grpDest = selectRandom _grpDest;
+_grpPath = (_paths#0) + [_grpDest];
 [_grp, _grpPath] call _reinfPath;

@@ -49,8 +49,8 @@ execVM "briefing.sqf";
 	//7 ou 8 PAX
 	GROUPE_ENI_GRAND = [
 		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_2,_gl_ENI,_mg_ENI,_at_ENI],
-		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_2,_gl_ENI,_lmg_ENI,_lat_ENI],
-		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_2,_fsl_ENI_3,_gl_ENI,_lmg_ENI,_lat_ENI],
+		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_2,_lat_ENI,_lmg_ENI,_lat_ENI],
+		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_2,_fsl_ENI_3,_mg_ENI,_lmg_ENI,_lat_ENI],
 		[_sl_ENI,_tl_ENI,_fsl_ENI_1,_fsl_ENI_1,_gl_ENI,_mark_ENI,_mg_ENI,_lat_ENI]
 	];
 	
@@ -67,7 +67,7 @@ private _action_hack_computer = [
 	"",
 	{
 		["Hacking du système lancé !"] remoteExec ["hint"];
-		execVM "functions\misc\fn_checkAMI.sqf"
+		[] spawn int_fnc_checkAMI;
 	},
 	{isHackable}
 ] call ace_interact_menu_fnc_createAction;
@@ -78,8 +78,10 @@ if (is3DENPreview) then {
 
 /* Spawn des groupes ENI */
 	
-	execVM "spawn_IA\spawnFirstWave.sqf";
-	execVM "spawn_IA\spawnReinf.sqf";
+	//execVM "functions\rush\fn_spawnFirstWave.sqf";
+	[] spawn int_fnc_spawnFirstWave;
+	//execVM "functions\rush\fn_spawnReinf.sqf";
+	[] spawn int_fnc_spawnReinf;
 
 /* Spawn des groupes ENI */
 
@@ -88,8 +90,10 @@ if (is3DENPreview) then {
 	if !(hasInterface or isServer) then {
 
 		/* Spawn des groupes ENI */
-			execVM "spawn_IA\spawnFirstWave.sqf";
-			execVM "spawn_IA\spawnReinf.sqf";
+			//execVM "functions\rush\fn_spawnFirstWave.sqf";
+			[] spawn int_fnc_spawnFirstWave;
+			//execVM "functions\rush\fn_spawnReinf.sqf";
+			[] spawn int_fnc_spawnReinf;
 		/* Spawn des groupes ENI */
 	
 	};

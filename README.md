@@ -6,18 +6,39 @@ TODO
 
 ## Changelog
 
+### v4, 04/01/2023
+
+#### Changed
+
+* Large groups have less probability to have a grenade launcher
+* Path for ENI marksman group is more consistent
+* Timer for reinforcements waits that one player moves outside spawn area (same as AI rush)
+* rush&hack functions are now precompiled
+
+#### Fixed
+
+#### Added
+
+* Marker based system to automagically generate configuration for a new combat zone
+* New combat area "Obregan"
+
 ### v3, 02/01/2023
 
-* Combat zones are now confugurable to easyly add new ones. 3 new combat zones added. Combat Zone is randomly chosen in the configured ones or by parameter.
+#### Fixed
+
 * Correction for "GETIN NEAR" order for one of the special task group
+
+#### Added
+
+* Combat zones are now confugurable to easyly add new ones. 3 new combat zones added. Combat Zone is randomly chosen in the configured ones.
 
 ### v2, 31/12/2022
 
 #### Changed
 
-* IA rush starts as soon as a human player leave the delimited area at the spawn position
+* AI rush starts as soon as a human player leave the delimited area at the spawn position
 * More AI, more reinforcements
-* Dynmamic balance with number of players (AI + human)
+* Dynmamic balance with number of players (friendly AI + human)
 
 #### Fixed
 
@@ -36,9 +57,7 @@ Initial release
 
 ### Next release
 
-* add new combat zones (need to create some sort of configuration structure)
-* favorite path for reaching points of interest (to avoid strange path for marskmen)
+* players are able to choose ENI and players faction in a set of preconfigured factions
 
 ### Not planned
 
-* players are able to choose ENI and players faction in a set of preconfigured factions
