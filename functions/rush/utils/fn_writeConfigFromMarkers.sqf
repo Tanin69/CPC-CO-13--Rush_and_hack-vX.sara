@@ -1,4 +1,4 @@
-/* Generate a config text from markers */
+/* Generate a config from a set of Eden markers */
 
 /* HOW TO
 1- Generate the set of markers with fn_createMarkerSet
@@ -182,5 +182,6 @@ _config = _config + ([1] call _closeClass);
 
 //Copy the generated config to clipboard
 copyToClipboard _config;
+systemChat "Configuration copiée dans le presse-papier";
 
 

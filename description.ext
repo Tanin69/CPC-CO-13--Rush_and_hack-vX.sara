@@ -9,8 +9,8 @@ author = "tanin69";
 class Header
 {
 	gameType = Coop; // MP mission type
-	minPlayers = 8;
-	maxPlayers = 13;
+	minPlayers = 4;
+	maxPlayers = 15;
 };
 
 // Affichage durant l'écran de chargement
@@ -48,11 +48,6 @@ class Extended_PreInit_EventHandlers {
 	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
 };
 
-class Params
-{
-
-};
-
 class CfgFunctions 
 {
 	#include "vcom\cfgFunctions.hpp"
@@ -60,6 +55,8 @@ class CfgFunctions
 	#include "functions\external\LARs\spawnComp\functions\functions.hpp"
 };
 
+#include "Cfg\cfgParams.hpp"
 #include "Cfg\cfgCompositions.hpp"
 #include "Cfg\cfgCombatZones.hpp"
 #include "Cfg\cfgDebriefing.hpp"
+#include "Cfg\cfgFactions.hpp"

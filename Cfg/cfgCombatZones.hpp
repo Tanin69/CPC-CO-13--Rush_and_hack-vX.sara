@@ -1,3 +1,9 @@
+/*
+
+This is the combat zone configuration file
+
+*/
+
 class CfgCombatZones
 {
 	//Name of the combat zone
@@ -236,7 +242,6 @@ class CfgCombatZones
 					{10053.1,6075.33},
 					{10179.6,6460.98},
 					{10749.2,6118.32}
-
 				};
 			};
 			class SpawnPoint_2 //South position

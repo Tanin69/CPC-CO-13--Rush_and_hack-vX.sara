@@ -7,7 +7,9 @@ player createDiaryRecord ["Diary", ["Crédits", "
 
 Auteur : tanin69<br/><br/>
 
-Mission prototype<br/><br/>
+Lucy et Vcom<br/><br/>
+
+Repo github : https://github.com/Tanin69/CPC-CO-13--Rush_and_hack-vX.sara
 
 "]];
 
@@ -26,7 +28,7 @@ player createDiaryRecord ["Diary", ["Conditions de victoire", "
 //Intel
 player createDiaryRecord ["Diary", ["Intel", "
 
-> Les ennemis sont en net surnombre. Des renforts sont probables.<br/><br/>
+> Il y a une arme lourde abandonnée sur la zone. Les ennemis chercheront probablement à s'en emparer.<br/><br/>
 
 > Contrairement à vous, ils savent où se trouve le PC à hacker : ils tenteront probablement de prendre le contrôle de cette zone rapidement.<br/><br/>
 
@@ -61,7 +63,7 @@ player createDiaryRecord ["Diary", ["Contexte", "
 
 Un violent accrochage a eu lieu <marker name='marker_zone'>sur cette zone</marker>. Il ne reste plus personne sur place. La faction ennemie a laissé de précieuses données sur zone.<br/><br/>
 
-Vous êtes insérés dans <marker name='marker_spawn_joueurs'>un avant-poste</marker> non loin de la zone de combat<br/><br/>.
+Vous êtes insérés dans <marker name='marker_spawn_joueurs'>un avant-poste</marker> non loin de la zone de combat.<br/><br/>
 
 Des renforts ennemis partent <marker name ='marker_spawn_AI'>de cette position</marker> et rushent sur la zone pour détruire les données afin qu'elles ne tombent pas entre vos mains.<br/><br/>
 

@@ -1,16 +1,23 @@
 /* Build mission environnement */
 
-// mission data is a complex array that contains all mission data : objectives (#0), spawn point, paths, point of interest, etc. for one spawn point (#1), the same data for the second spawn point (#2) and extract point data (#3)
-// mission data is now initialized from a config file
-//TODO : replace the missionDataArray with variables
-
-//missionData = [];
 private _spawnData = [];
 private _objData = [];
+
+combatZone = "";
+private _chosenCombatZone = ["CombatZone"] call BIS_fnc_getParamValue;
+switch (_chosenCombatZone) do {
+	case 0: {combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete","Obregan"]};
+	case 1: {combatZone = "Acorcha"};
+	case 2: {combatZone = "Bagango"};
+	case 3: {combatZone = "Masbete"};
+	case 4: {combatZone = "Obregan"};
+	case 5: {combatZone = "Yoro"};
+};
+
 /*Test only
 combatZone = "Obregan";
 */
-combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete","Obregan"];
+
 publicVariable "combatZone";
 
 /* build objective */
@@ -75,7 +82,6 @@ publicVariable "combatZone";
 	if (_iPlayers isEqualTo "1") then {
 		iAI = "2"
 	};
-	
 	publicVariable "iAI";
 
 	//players spawn point (based on a composition)
@@ -96,7 +102,7 @@ publicVariable "combatZone";
 	//Create the trigger for AI rush to begin (condition : any human player outside the spawn area)
 	_trg = createTrigger ["EmptyDetector", [_playerSpawnPos#0,_playerSpawnPos#1]];
 	_trg setTriggerArea [20, 13, _playerSpawnPos#2, true];
-	_trg setTriggerStatements ["time > 30 && count((allplayers - entities 'HeadlessClient_F') inAreaArray thisTrigger) < count(allplayers - entities 'HeadlessClient_F')", "goRush = true; publicVariable 'goRush';", ""];
+	_trg setTriggerStatements ["time > 30 && count((allplayers - entities 'HeadlessClient_F') inAreaArray thisTrigger) < count(allplayers - entities 'HeadlessClient_F')", "goRush = true; timeGoRush = time; publicVariable 'goRush'; publicVariable 'timeGoRush'", ""];
 
 	//AI spawn point
 	private _AISpawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "spawnPos");
