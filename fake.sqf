@@ -1,38 +1,9 @@
-//role not defined
-_primaryWeapon="CUP_arifle_G36K_KSK_hex_ZO_las";
-_pwMuzzleAtt="";
-_pwPointer="CUP_acc_LLM01_hex_L";
-_pwOptic="CUP_optic_HensoldtZO_low_RDS_hex";
-_pwMagFirstAmmo=["CUP_30Rnd_556x45_G36",30];
-_pwMagSecondAmmo=[];
-_pwBipod="";
-_secondaryWeapon="CUP_launch_MAAWS_Scope";
-_swMuzzleAtt="";
-_swPointer="";
-_swOptic="CUP_optic_MAAWS_Scope";
-_swMagFirstAmmo=["CUP_MAAWS_HEAT_M",1];
-_swMagSecondAmmo=[];
-_swBipod="";
-_handgun="CUP_hgun_glock17_flashlight";
-_hgMuzzleAtt="";
-_hgPointer="CUP_acc_Glock17_Flashlight";
-_hgOptic="";
-_hgMagFirstAmmo=["CUP_17Rnd_9x19_glock17",17];
-_hgMagSecondAmmo=[];
-_hgBipod="";
-_uniformCls="CUP_U_B_GER_Flecktarn_6";
-_itemsU=[["FirstAidKit",1],["CUP_NVG_PVS7",1],["CUP_30Rnd_556x45_G36",4,30]];
-_vestCls="CUP_V_B_GER_Carrier_Vest";
-_itemsV=[["CUP_30Rnd_556x45_G36",3,30],["CUP_HandGrenade_M67",2,1],["B_IR_Grenade",1,1],["SmokeShellRed",1,1],["CUP_17Rnd_9x19_glock17",3,17]];
-_backpackCls="CUP_B_GER_Backpack_AT_Fleck";
-_itemsB=[["CUP_MAAWS_HEAT_M",1,1],["CUP_MAAWS_HEDP_M",1,1]];
-_headgear="CUP_H_Ger_Cap_EP_Grn2";
-_facewear="CUP_G_PMC_Facewrap_Tropical_Glasses_Ember";
-_binocCls="CUP_Vector21Nite";
-_binocMuzzleAtt="";
-_binocPointer="";
-_binocOptic="";
-_binocMagFirstAmmo=[];
-_binocMagSecondAmmo=[];
-_binocBipod="";
-_items=["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""];
+this addAction [
+	"Fin de partie",
+	{["MyEnding", true, 3] remoteExec ["BIS_fnc_endMission", 0, true]},
+	nil,
+	1.5,
+	nil,
+	nil,
+	"",
+	"count (units player inAreaArray [position _target,50,50]) isEqualTo (count units player)"]

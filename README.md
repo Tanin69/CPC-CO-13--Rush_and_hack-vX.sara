@@ -6,12 +6,34 @@ TODO
 
 ## Changelog
 
+### v6, 18/01/23
+
+#### Changed
+
+* Added two sappers / explosive specalists -> 17 available slots
+* All living friendly units (players + AI) must be near the end flag to be able to complete the mission with the "Fin de partie" action (20 m. raduis around the pole). Be aware that unconscious players are not dead...
+* Extented initial delay before first reinforcement wave : between 10 and 12 minutes
+* Tuned reinforcements frequency - low:7-10 minutes, normal:5-8 minutes, high:3-6 minutes
+
+#### Fixed
+
+* Rewrote code that manages the hacking of the computer. Previous one was a mess.
+* Typo in czech loadout
+* Wrong inventory was showing in the briefing screen due to a nasty hack in the loadout script
+
+#### Added
+
+* Friendly AI are equiped with player's faction loadout and not default loadout (Special feature for Bruno ^^)
+* New customizable value for delay before enemy rush : random value from 0 to 10 minutes
+* New customizable value for reinforcements frequency : random value between existing frequencies
+* More combat areas !
+
 ### v5, 14/01/2023
 
 #### Changed
 
 * Number of enemy AI is dynamically balanced according to the exact number of players and friendly AI (at the start of the mission) and the difficulty settings
-* Added two heavy gunners -> 15 possible slots
+* Added two heavy gunners -> 15 available slots
 
 #### Fixed
 
@@ -50,7 +72,7 @@ TODO
 
 #### Added
 
-* Combat zones are now confugurable to easyly add new ones. 3 new combat zones added. Combat Zone is randomly chosen in the configured ones.
+* Combat zones are now configurable to easyly add new ones. 3 new combat zones added. Combat Zone is randomly chosen in the configured ones.
 
 ### v2, 31/12/2022
 
@@ -76,7 +98,5 @@ Initial release
 ## Backlog
 
 ### Next release
-
-* players are able to choose ENI and players faction in a set of preconfigured factions
 
 ### Not planned

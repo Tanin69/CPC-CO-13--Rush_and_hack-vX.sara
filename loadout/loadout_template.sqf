@@ -21,7 +21,7 @@
 
 hard_setLoadout = {
 
-	_unit = _this select 0;
+	params ["_unit"];
 	_loadout = _unit getVariable ["loadout","fsl"];
 	
 	/* Change here for common loadout */
@@ -87,6 +87,7 @@ hard_setLoadout = {
 			case "at"   : {[_unit] call loadout_at};
 			case "gl"   : {[_unit] call loadout_gl};
 			case "tp"   : {[_unit] call loadout_tp};
+			case "explo": {[_unit] call loadout_explo};
 		};
 	/* call loadout per role. Don't change unless you want to add a new role */
 
@@ -171,6 +172,12 @@ hard_setLoadout = {
 	};
 
 	loadout_tp = //
+	{
+		params["_unit"];		
+		[_unit] call setLoadOut;
+	};
+
+	loadout_explo = //
 	{
 		params["_unit"];		
 		[_unit] call setLoadOut;

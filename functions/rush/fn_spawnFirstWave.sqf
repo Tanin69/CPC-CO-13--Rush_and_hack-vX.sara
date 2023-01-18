@@ -11,7 +11,7 @@ private _grpPath = [];
 /* Difficulty management */
 	//Initial balance of power : very easy=1vs2 | easy=1vs4 | medium=1vs6 | hard=1vs8
 	private _nbJoueurs = playersNumber _AMISide;
-	_grpDef = GRP_ENI_6;
+	private _grpDef = GRP_ENI_6;
 	private _nbGroups = _nbJoueurs;
 	private _initBoP = ["BalanceOfPower"] call BIS_fnc_getParamValue;
 	switch (_initBoP) do {
@@ -28,6 +28,7 @@ private _grpPath = [];
 //Delay before rush (player choice)
 //_delayBeforeRush = 60;
 private _delayBeforeRush = ["DelayBeforeRush"] call BIS_fnc_getParamValue;
+if (_delayBeforeRush isEqualTo 1) then {_delayBeforeRush = random [0,300,600]};
 waituntil { !(isNil "goRush") && !(isNil "timeGoRush") && {(time > (timeGoRush + _delayBeforeRush))}};
 
 private _reinfPath = {

@@ -1,8 +1,6 @@
 params ["_player","_didJIP"];
 
 // Variables pour les loadouts
-playerUnit = _player;	// unité du joueur (sélectionnée dans l'écran des slots)
-playerIsJIP = _didJIP;	// boolean (true ou false). True = le joueur se connecte en cours de partie.
 
 private _playersFaction = ["PlayersFaction"] call BIS_fnc_getParamValue;
 private _playersLoadout = "";
@@ -39,15 +37,3 @@ if !(isMultiplayer) then
 		};
 	} foreach allUnits;
 };
-
-player allowdamage false;
-
-waitUntil {time > 1};
-if ((uniform _player) == "") then {
-[_player] call hard_setLoadout;
-_player setVariable ["loadout_done", true, true];
-_player action ["WeaponOnBack", _player];
-};
-
-waitUntil {time > 10};
-player allowdamage true;

@@ -8,26 +8,26 @@ class EditorData
 	toggles=1121;
 	class ItemIDProvider
 	{
-		nextID=3333;
+		nextID=3670;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1147;
+		nextID=1243;
 	};
 	class LayerIndexProvider
 	{
-		nextID=448;
+		nextID=551;
 	};
 	class Camera
 	{
-		pos[]={18112.18,24.133329,18228.896};
-		dir[]={0.38608098,-0.30210575,0.87159258};
-		up[]={0.12235437,0.95327443,0.27621967};
-		aside[]={0.91431451,7.4505806e-009,-0.4050051};
+		pos[]={13710.771,509.74188,15327.265};
+		dir[]={-0.52349997,-0.46117327,-0.71646279};
+		up[]={-0.27208036,0.88730317,-0.37236905};
+		aside[]={-0.80744791,2.773013e-007,0.58998007};
 	};
 };
 binarizationWanted=0;
-sourceName="CPC-CO[13]-Rush_and_Hack-vX";
+sourceName="CPC-CO[17]-Rush_and_Hack-vX";
 addons[]=
 {
 	"A3_Modules_F_Curator_Curator",
@@ -84,13 +84,22 @@ addons[]=
 	"CUP_Weapons_Glock17",
 	"CUP_Weapons_ACE_compat",
 	"acre_main",
-	"CUP_Weapons_M136"
+	"CUP_Weapons_M136",
+	"CUP_Weapons_EVO",
+	"A3_Weapons_F_Items",
+	"ace_medical_engine",
+	"ace_attach",
+	"CUP_Weapons_Put",
+	"A3_Weapons_F_Explosives",
+	"ace_explosives",
+	"ace_trenches",
+	"ace_logistics_wirecutter"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=46;
+		items=53;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -370,6 +379,51 @@ class AddonsMetaData
 			className="CUP_Weapons_M136";
 			name="CUP_Weapons_M136";
 		};
+		class Item46
+		{
+			className="CUP_Weapons_EVO";
+			name="CUP_Weapons_EVO";
+		};
+		class Item47
+		{
+			className="ace_medical_engine";
+			name="ACE3 - Medical Engine";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item48
+		{
+			className="ace_attach";
+			name="ACE3 - Attach";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item49
+		{
+			className="CUP_Weapons_Put";
+			name="CUP_Weapons_Put";
+		};
+		class Item50
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item51
+		{
+			className="ace_trenches";
+			name="ACE3 - Trenches";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item52
+		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
@@ -407,19 +461,6 @@ class CustomAttributes
 		};
 		class Attribute1
 		{
-			property="GDC_Inventory";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute2
-		{
 			property="GDC_Roster";
 			expression="false";
 			class Value
@@ -427,24 +468,100 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
-		class Attribute3
+		class Attribute2
 		{
-			property="EnableDebugConsole";
-			expression="true";
+			property="cba_settings_hash";
+			expression="false";
 			class Value
 			{
 				class data
 				{
-					singleType="SCALAR";
-					value=1;
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="#CBA_HASH#";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=1;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="cba_network_loadoutvalidation";
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=1;
+									class Item0
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								singleType="ANY";
+							};
+						};
+					};
 				};
 			};
 		};
-		class Attribute4
+		class Attribute3
 		{
 			property="GDC_DeleteSeagull";
 			expression="false";
@@ -457,7 +574,33 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute4
+		{
+			property="GDC_Inventory";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=0;
+				};
+			};
+		};
 		class Attribute5
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute6
 		{
 			property="GDC_AcreSpectator";
 			expression="false";
@@ -470,7 +613,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=6;
+		nAttributes=7;
 	};
 };
 class Mission
@@ -497,7 +640,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=15;
+		items=21;
 		class Item0
 		{
 			dataType="Logic";
@@ -3069,7 +3212,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=15;
+				items=17;
 				class Item0
 				{
 					dataType="Object";
@@ -3082,7 +3225,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="LIEUTENANT";
 						init="this setVariable [""loadout"", ""off""]";
 						description="CdO@Commandement";
 						isPlayer=1;
@@ -3220,7 +3363,7 @@ class Mission
 							headgear="CUP_H_CZ_Cap_rgr";
 						};
 					};
-					id=3175;
+					id=3371;
 					type="CUP_B_CZ_SpecOps_TL_WDL";
 					class CustomAttributes
 					{
@@ -3387,7 +3530,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3176;
+					id=3372;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -3607,7 +3750,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3177;
+					id=3373;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -3811,7 +3954,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet03";
 						};
 					};
-					id=3178;
+					id=3374;
 					type="CUP_B_CZ_SpecOps_TL_WDL";
 					class CustomAttributes
 					{
@@ -3962,7 +4105,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3179;
+					id=3375;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -4131,7 +4274,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet03";
 						};
 					};
-					id=3180;
+					id=3376;
 					type="CUP_B_CZ_SpecOps_MG_WDL";
 					class CustomAttributes
 					{
@@ -4286,7 +4429,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3181;
+					id=3377;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -4437,7 +4580,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3182;
+					id=3378;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -4588,7 +4731,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3183;
+					id=3379;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -4622,6 +4765,213 @@ class Mission
 					};
 				};
 				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18143.799,8.7014389,18272.67};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""loadout"", ""explo""]";
+						description="Alpha: Sapper/explo Spe";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="CUP_smg_EVO_MRad_Flashlight_Snds";
+								optics="CUP_optic_MRad";
+								muzzle="muzzle_snds_L";
+								flashlight="CUP_acc_Flashlight";
+								firemode="CUP_smg_EVO_MRad_Flashlight_Snds:Single";
+								class primaryMuzzleMag
+								{
+									name="CUP_30Rnd_9x19_EVO";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="CUP_hgun_Phantom_Flashlight_snds";
+								muzzle="muzzle_snds_L";
+								flashlight="CUP_acc_CZ_M3X";
+								class primaryMuzzleMag
+								{
+									name="CUP_18Rnd_9x19_Phantom";
+									ammoLeft=18;
+								};
+							};
+							class binocular
+							{
+								name="CUP_Vector21Nite";
+							};
+							class uniform
+							{
+								typeName="CUP_U_B_CZ_WDL_Kneepads";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="CUP_30Rnd_9x19_EVO";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="CUP_NVG_PVS7_Hide";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="CUP_V_CZ_NPP2006_vz95";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="CUP_30Rnd_9x19_EVO";
+										count=6;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="CUP_18Rnd_9x19_Phantom";
+										count=3;
+										ammoLeft=18;
+									};
+									class Item2
+									{
+										name="SmokeShell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="SmokeShellRed";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="B_IR_Grenade";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item5
+									{
+										name="CUP_HandGrenade_M67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="CUP_B_ACRPara_m95_Explosives";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="CUP_PipeBomb_M";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="APERSBoundingMine_Range_Mag";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="APERSMine_Range_Mag";
+										count=5;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_wirecutter";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_M26_Clacker";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							gps="ItemGPS";
+							goggles="CUP_G_ESS_KHK_Scarf_Face_Tan";
+							hmd="CUP_NVG_PVS15_Hide";
+							headgear="CUP_H_CZ_Cap_Headphones_des";
+						};
+					};
+					id=3380;
+					type="CUP_B_CZ_SpecOps_Exp_WDL";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="CUP_D_Male04_CZ_ACR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
@@ -4792,7 +5142,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet03";
 						};
 					};
-					id=3184;
+					id=3381;
 					type="CUP_B_CZ_SpecOps_TL_WDL";
 					class CustomAttributes
 					{
@@ -4825,7 +5175,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item10
+				class Item11
 				{
 					dataType="Object";
 					class PositionInfo
@@ -4943,7 +5293,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3185;
+					id=3382;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -4976,7 +5326,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item11
+				class Item12
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5112,7 +5462,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet03";
 						};
 					};
-					id=3186;
+					id=3383;
 					type="CUP_B_CZ_SpecOps_MG_WDL";
 					class CustomAttributes
 					{
@@ -5145,7 +5495,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item12
+				class Item13
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5268,7 +5618,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3187;
+					id=3384;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -5301,7 +5651,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item13
+				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5419,7 +5769,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3188;
+					id=3385;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -5452,7 +5802,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item14
+				class Item15
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5570,7 +5920,7 @@ class Mission
 							headgear="CUP_H_CZ_Helmet04";
 						};
 					};
-					id=3189;
+					id=3386;
 					type="CUP_B_CZ_SpecOps_WDL";
 					class CustomAttributes
 					{
@@ -5603,11 +5953,59 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18141.148,8.7014389,18279.336};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""loadout"", ""explo""]";
+						description="Bravo: Sapper/explo Spe";
+						isPlayable=1;
+					};
+					id=3387;
+					type="CUP_B_CZ_SpecOps_Exp_WDL";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="CUP_D_Male04_CZ_ACR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			class Attributes
 			{
 			};
-			id=3174;
+			id=3370;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5625,6 +6023,2580 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item15
+		{
+			dataType="Layer";
+			name="R&H_Eponia";
+			state=1;
+			class Entities
+			{
+				items=68;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={12494.622,180,15013.92};
+					name="rah_Eponia_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3389;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={12557.745,179.89545,15093.873};
+					name="rah_Eponia_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3390;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={12616.434,180,15037.447};
+					name="rah_Eponia_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3391;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={12470.339,176.72998,14978.553};
+					name="rah_Eponia_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3392;
+					atlOffset=-3.2700195;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={12573.993,177.459,15152.668};
+					name="rah_Eponia_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3393;
+					atlOffset=-1.2822113;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={12367.494,180,15007.951};
+					name="rah_Eponia_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3394;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={12442.182,210.5083,14243.66};
+					name="rah_Eponia_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					id=3395;
+					atlOffset=-5.6325073;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={12201.185,119.127,15742.762};
+					name="rah_Eponia_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=171.07092;
+					id=3396;
+					atlOffset=-0.00035858154;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={12417.412,203.54834,14347.572};
+					name="rah_Eponia_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3397;
+					atlOffset=-3.2942352;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={12429.004,205.31885,14317.244};
+					name="rah_Eponia_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3398;
+					atlOffset=-2.8839111;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={12440.618,209.38184,14294.961};
+					name="rah_Eponia_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3399;
+					atlOffset=-1.3013153;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={12422.963,207.37689,14329.732};
+					name="rah_Eponia_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3400;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={12369.609,153.22217,15599.059};
+					name="rah_Eponia_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3402;
+					atlOffset=-1.8791809;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={12232.005,127.35122,15636.052};
+					name="rah_Eponia_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3403;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={12116.136,147.93799,15551.291};
+					name="rah_Eponia_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3404;
+					atlOffset=-2.7869263;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={12230.755,126.94905,15646.727};
+					name="rah_Eponia_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3405;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={12147.273,199.45605,14775.416};
+					name="rah_Eponia_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3407;
+					atlOffset=-2.4465942;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={12842.708,197.9505,15124.025};
+					name="rah_Eponia_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3408;
+					atlOffset=7.1081238;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={9935.3438,0,12649.746};
+					name="rah_Eponia_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3409;
+					atlOffset=19.663879;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={14229.991,0,17638.904};
+					name="rah_Eponia_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3410;
+					atlOffset=49.69582;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={12298.509,191.56313,14706.973};
+					name="rah_Eponia_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3411;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={12481.548,156.43213,15277.17};
+					name="rah_Eponia_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3412;
+					atlOffset=-2.0425415;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={12677.045,180,14812.429};
+					name="rah_Eponia_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3413;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={12868.437,176.59955,14896.76};
+					name="rah_Eponia_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3414;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={12252.349,179.3857,14928.491};
+					name="rah_Eponia_Extract_4";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3415;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={12586.347,160.81804,15309.143};
+					name="rah_Eponia_Spawn2_WP_1_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3416;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={12752.424,173.06631,15230.61};
+					name="rah_Eponia_Spawn2_WP_1_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3417;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={12802.635,181.93773,15134.053};
+					name="rah_Eponia_Spawn2_WP_1_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3418;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={12335.299,142.0038,15368.367};
+					name="rah_Eponia_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3419;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={12581.197,171.42456,15220.313};
+					name="rah_Eponia_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3420;
+					atlOffset=0.00016784668;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={12016.018,149.79318,15291.123};
+					name="rah_Eponia_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3421;
+					atlOffset=-2.7869263;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={11954.221,170.24588,14983.428};
+					name="rah_Eponia_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3422;
+					atlOffset=-2.7869263;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={12106.244,185.10057,14926.652};
+					name="rah_Eponia_Spawn2_WP_3_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3423;
+					atlOffset=-2.7869263;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={12269.826,135.35191,15404.36};
+					name="rah_Eponia_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3424;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={12151.262,147.10039,15269.629};
+					name="rah_Eponia_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3425;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={12100.063,147.69876,15186.994};
+					name="rah_Eponia_Spawn2_WP_4_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3426;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={12320.093,207.82584,14412.72};
+					name="rah_Eponia_Spawn1_WP_1_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3427;
+					atlOffset=-3.2942352;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={12211.283,206.79552,14473.482};
+					name="rah_Eponia_Spawn1_WP_1_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3428;
+					atlOffset=-3.2942352;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={12086.223,209.70473,14604.194};
+					name="rah_Eponia_Spawn1_WP_1_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3429;
+					atlOffset=-3.2942352;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={12124.908,197.22217,14739.968};
+					name="rah_Eponia_Spawn1_WP_1_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3430;
+					atlOffset=-2.3066254;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={12382.857,199.23116,14579.729};
+					name="rah_Eponia_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3432;
+					atlOffset=-2.8839111;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={12472.082,183.13672,14811.551};
+					name="rah_Eponia_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3433;
+					atlOffset=-2.8156128;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={12515.102,178.30449,14878.469};
+					name="rah_Eponia_Spawn1_WP_2_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3434;
+					atlOffset=-2.8839111;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={12621.504,197.31392,14401.978};
+					name="rah_Eponia_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3435;
+					atlOffset=-1.3013153;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={12729.493,189.90137,14562.588};
+					name="rah_Eponia_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3436;
+					atlOffset=-1.3013153;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={12802.338,177.7663,14746.719};
+					name="rah_Eponia_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3437;
+					atlOffset=-1.3013153;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={12730.64,178.10437,14914.014};
+					name="rah_Eponia_Spawn1_WP_3_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3438;
+					atlOffset=-1.3013153;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={12213.497,213.17601,14452.27};
+					name="rah_Eponia_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3439;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={12069.306,212.38167,14605.474};
+					name="rah_Eponia_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3440;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={12037.119,192.13831,14757.391};
+					name="rah_Eponia_Spawn1_WP_4_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3441;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={12129.814,187.34758,14924.755};
+					name="rah_Eponia_Spawn1_WP_4_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3442;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={12102.612,195.14035,14937.836};
+					name="rah_Eponia_Spawn2_POI_2";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3443;
+					atlOffset=7.1081238;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={12687.822,183.53113,14924.117};
+					name="rah_Eponia_Spawn1_POI_2";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3444;
+					atlOffset=-2.4465942;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={12094.053,185.66713,14929.572};
+					name="rah_Eponia_Spawn1_POI_3";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3445;
+					atlOffset=-2.4465942;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={12056.617,186.52365,14911.334};
+					name="rah_Eponia_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3446;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={12920.221,172.31213,14868.892};
+					name="rah_Eponia_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3447;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={12877.778,187.23833,15167.832};
+					name="rah_Eponia_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3448;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={12383.236,180.35643,15092.176};
+					name="rah_Eponia_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3449;
+				};
+				class Item58
+				{
+					dataType="Marker";
+					position[]={12597.291,175.24217,15201.047};
+					name="rah_Eponia_Spawn1_paradrop_6";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3450;
+				};
+				class Item59
+				{
+					dataType="Marker";
+					position[]={12538.243,182.59637,14835.676};
+					name="rah_Eponia_Spawn1_paradrop_7";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3451;
+				};
+				class Item60
+				{
+					dataType="Marker";
+					position[]={12871.449,187.49174,15113.316};
+					name="rah_Eponia_Spawn2_paradrop_2";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3452;
+					atlOffset=-2.0425415;
+				};
+				class Item61
+				{
+					dataType="Marker";
+					position[]={12900.191,176.10222,14905.83};
+					name="rah_Eponia_Spawn2_paradrop_3";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3453;
+					atlOffset=-2.0425415;
+				};
+				class Item62
+				{
+					dataType="Marker";
+					position[]={12691.808,178.02695,14770.2};
+					name="rah_Eponia_Spawn2_paradrop_4";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3454;
+					atlOffset=-2.0425415;
+				};
+				class Item63
+				{
+					dataType="Marker";
+					position[]={12096.295,185.07692,14902.237};
+					name="rah_Eponia_Spawn2_paradrop_5";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3455;
+					atlOffset=-2.0425415;
+				};
+				class Item64
+				{
+					dataType="Marker";
+					position[]={12281.327,191.74623,14674.99};
+					name="rah_Eponia_Spawn2_paradrop_6";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3456;
+					atlOffset=-2.0425415;
+				};
+				class Item65
+				{
+					dataType="Marker";
+					position[]={12037.016,193.22957,14725.291};
+					name="rah_Eponia_Spawn2_paradrop_7";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3457;
+					atlOffset=-2.0425415;
+				};
+				class Item66
+				{
+					dataType="Marker";
+					position[]={12520.25,175.18884,15144.754};
+					name="rah_Eponia_Spawn2_paradrop_8";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3458;
+					atlOffset=-2.0425415;
+				};
+				class Item67
+				{
+					dataType="Marker";
+					position[]={12279.53,177.95746,15050.441};
+					name="rah_Eponia_Spawn2_paradrop_9";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3459;
+					atlOffset=-2.0425415;
+				};
+			};
+			id=3388;
+			atlOffset=0.29267883;
+		};
+		class Item16
+		{
+			dataType="Layer";
+			name="Extraction_position";
+			id=3461;
+			atlOffset=70.019997;
+		};
+		class Item17
+		{
+			dataType="Layer";
+			name="Extraction_position";
+			id=3463;
+			atlOffset=70.019997;
+		};
+		class Item18
+		{
+			dataType="Layer";
+			name="R&H_Pesto";
+			state=1;
+			class Entities
+			{
+				items=63;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={9721.6436,184.97171,8117.1465};
+					name="rah_Pesto_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3471;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9702.248,182.75829,8126.0127};
+					name="rah_Pesto_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3472;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={9848.793,191.04185,8212.4512};
+					name="rah_Pesto_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3473;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={9785.5176,192.09868,8111.9766};
+					name="rah_Pesto_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3474;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={9601.0615,179.03467,8146.6982};
+					name="rah_Pesto_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3475;
+					atlOffset=-2.0518646;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={10128.567,202.32001,8369.2949};
+					name="rah_Pesto_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3476;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={9033.4727,168.33965,7820.7593};
+					name="rah_Pesto_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					angle=63.999977;
+					id=3477;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={10176.488,160.89799,8726.3184};
+					name="rah_Pesto_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=179.0049;
+					id=3478;
+					atlOffset=-6.2000732;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={9095.5654,165.43839,7857.6162};
+					name="rah_Pesto_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3479;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={9076.5039,163.39551,7843.6196};
+					name="rah_Pesto_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3480;
+					atlOffset=-3.0665894;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={9060.6201,159.80322,7858.2158};
+					name="rah_Pesto_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3481;
+					atlOffset=-6.9381866;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={9096.624,161.54736,7815.6294};
+					name="rah_Pesto_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3482;
+					atlOffset=-7.8100891;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={10176.187,151.46289,8700.0527};
+					name="rah_Pesto_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3484;
+					atlOffset=-17.674225;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={10172.975,166.08545,8679.1318};
+					name="rah_Pesto_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3485;
+					atlOffset=-4.5311584;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={10148.617,164.35156,8679.96};
+					name="rah_Pesto_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3486;
+					atlOffset=-8.094223;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={10168.738,163.31885,8667.0234};
+					name="rah_Pesto_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3487;
+					atlOffset=-9.6978607;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={10181.445,170.74393,8680.5615};
+					name="rah_Pesto_Spawn2_WP_5_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3488;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={9840.0059,224.41309,7954.9502};
+					name="rah_Pesto_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3489;
+					atlOffset=-2.9564972;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={10066.021,230.34288,8060.8447};
+					name="rah_Pesto_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3490;
+					atlOffset=1.5258789e-005;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={8065.0137,-6.2373047,9703.79};
+					name="rah_Pesto_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3491;
+					atlOffset=7.7864418;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={12068.278,-9.4199219,10122.855};
+					name="rah_Pesto_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3492;
+					atlOffset=37.52702;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={9706.0469,217.55225,7871.8022};
+					name="rah_Pesto_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3493;
+					atlOffset=-3.447403;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={10026.444,198.62012,8152.9707};
+					name="rah_Pesto_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3494;
+					atlOffset=-5.0254364;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={9526.874,194.04558,8199.877};
+					name="rah_Pesto_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3495;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={9846.5879,210.84589,7846.1816};
+					name="rah_Pesto_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3496;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={9276.5264,163.42009,8055.9204};
+					name="rah_Pesto_Spawn1_WP_1_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3497;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={9458.666,181.87892,8191.4658};
+					name="rah_Pesto_Spawn1_WP_1_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3498;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={9243.6992,196.61853,7762.5918};
+					name="rah_Pesto_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3499;
+					atlOffset=-3.0665894;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={9466.0781,200.52875,7820.834};
+					name="rah_Pesto_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3500;
+					atlOffset=-3.0665894;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={9653.5117,197.35349,7946.8496};
+					name="rah_Pesto_Spawn1_WP_2_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3501;
+					atlOffset=-3.0665894;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={9751.9941,196.26517,8032.623};
+					name="rah_Pesto_Spawn1_WP_2_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3502;
+					atlOffset=-3.0665894;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={9264.8779,156.11324,7957.4375};
+					name="rah_Pesto_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3503;
+					atlOffset=-6.9381866;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={9301.9414,160.73268,8152.2852};
+					name="rah_Pesto_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3504;
+					atlOffset=-6.9381866;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={9460.7832,167.9095,8298.4189};
+					name="rah_Pesto_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3505;
+					atlOffset=-6.9381866;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={9631.2744,173.29129,8298.4189};
+					name="rah_Pesto_Spawn1_WP_3_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3506;
+					atlOffset=-6.9381866;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={9656.6885,214.40985,7846.249};
+					name="rah_Pesto_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3507;
+					atlOffset=-7.8100891;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={9899.1885,217.58159,7971.2051};
+					name="rah_Pesto_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3508;
+					atlOffset=-7.8100891;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={9952.1348,195.84209,8112.0449};
+					name="rah_Pesto_Spawn1_WP_4_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3509;
+					atlOffset=-7.8100891;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={9555.4756,200.15305,8227.0811};
+					name="rah_Pesto_Spawn1_POI_2";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3510;
+					atlOffset=-2.9564972;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={9495.6631,169.18921,8056.3564};
+					name="rah_Pesto_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3511;
+					atlOffset=-3.447403;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={9601.7939,179.26967,8309.002};
+					name="rah_Pesto_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3512;
+					atlOffset=-3.447403;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={9915.4873,186.71701,8310.8799};
+					name="rah_Pesto_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3513;
+					atlOffset=-3.447403;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={9907.9736,200.21826,8083.5928};
+					name="rah_Pesto_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3514;
+					atlOffset=-3.447403;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={10207.128,185.86472,8412.5215};
+					name="rah_Pesto_Spawn2_WP_1_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3515;
+					atlOffset=-17.674225;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={10140.414,184.40573,8256.8564};
+					name="rah_Pesto_Spawn2_WP_1_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3516;
+					atlOffset=-17.674225;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={9970.9824,182.45496,8164.729};
+					name="rah_Pesto_Spawn2_WP_1_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3517;
+					atlOffset=-17.674225;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={10125.589,196.81384,8445.3516};
+					name="rah_Pesto_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3518;
+					atlOffset=-4.5311584;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={9959.334,190.30551,8305.5703};
+					name="rah_Pesto_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3519;
+					atlOffset=-4.5311584;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={9968.8652,168.07399,8615.8418};
+					name="rah_Pesto_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3520;
+					atlOffset=-8.094223;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={9836.4961,176.41229,8482.4141};
+					name="rah_Pesto_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3521;
+					atlOffset=-8.094223;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={9721.0713,172.27284,8347.9287};
+					name="rah_Pesto_Spawn2_WP_3_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3522;
+					atlOffset=-8.094223;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={10046.169,169.35059,8584.0732};
+					name="rah_Pesto_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3523;
+					atlOffset=-9.6978607;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={9867.2061,174.9854,8443.2334};
+					name="rah_Pesto_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3524;
+					atlOffset=-9.6978607;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={9832.2607,175.91902,8336.2793};
+					name="rah_Pesto_Spawn2_WP_4_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3525;
+					atlOffset=-9.6978607;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={9792.0205,182.61621,8522.6553};
+					name="rah_Pesto_Spawn2_WP_5_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3526;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={9619.4121,175.11061,8386.0498};
+					name="rah_Pesto_Spawn2_WP_5_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3527;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={9599.293,185.50807,8245.21};
+					name="rah_Pesto_Spawn2_WP_5_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3528;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={9878.1875,181.87329,8355.5801};
+					name="rah_Pesto_Spawn2_paradrop_2";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3529;
+					atlOffset=-5.0254364;
+				};
+				class Item58
+				{
+					dataType="Marker";
+					position[]={10138.472,196.97061,8326.9248};
+					name="rah_Pesto_Spawn2_paradrop_3";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3530;
+					atlOffset=-5.0254364;
+				};
+				class Item59
+				{
+					dataType="Marker";
+					position[]={9512.835,175.46844,8157.3818};
+					name="rah_Pesto_Spawn2_paradrop_4";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3531;
+					atlOffset=-5.0254364;
+				};
+				class Item60
+				{
+					dataType="Marker";
+					position[]={9812.5195,207.5677,7826.6543};
+					name="rah_Pesto_Spawn2_paradrop_5";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3532;
+					atlOffset=-5.0254364;
+				};
+				class Item61
+				{
+					dataType="Marker";
+					position[]={9621.4854,177.05952,8055.8945};
+					name="rah_Pesto_Spawn2_paradrop_6";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3533;
+					atlOffset=-5.0254364;
+				};
+				class Item62
+				{
+					dataType="Marker";
+					position[]={9715.8086,175.46552,8295.8809};
+					name="rah_Pesto_Spawn2_paradrop_7";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3534;
+					atlOffset=-5.0254364;
+				};
+			};
+			id=3470;
+			atlOffset=0.47169495;
+		};
+		class Item19
+		{
+			dataType="Layer";
+			name="R&H_Benoma";
+			state=1;
+			class Entities
+			{
+				items=73;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={16313.9,50.640625,13614.337};
+					name="rah_Benoma_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3536;
+					atlOffset=-5.7163506;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={16278.533,59.833881,13637.354};
+					name="rah_Benoma_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3537;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={16255.611,46.410645,13882.523};
+					name="rah_Benoma_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3538;
+					atlOffset=-6.2105713;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={16199.723,65.131844,13680.089};
+					name="rah_Benoma_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3539;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={16312.016,57.3629,13766.603};
+					name="rah_Benoma_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3540;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={16636.604,52.540855,13731.93};
+					name="rah_Benoma_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3541;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={15586.459,54.947754,13848.94};
+					name="rah_Benoma_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					angle=102.90717;
+					id=3542;
+					atlOffset=-3.9221191;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={16916.604,14.47,14070.965};
+					name="rah_Benoma_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=239.01099;
+					id=3543;
+					atlOffset=0.00011253357;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={15619.89,55.700195,13821.936};
+					name="rah_Benoma_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3544;
+					atlOffset=-5.9421005;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={15614.764,50.928711,13841.169};
+					name="rah_Benoma_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3545;
+					atlOffset=-9.9997635;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={15635.733,61.351189,13831.14};
+					name="rah_Benoma_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3546;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={15618.041,60.423676,13857.149};
+					name="rah_Benoma_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3547;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={15615.482,60.423519,13852.762};
+					name="rah_Benoma_Spawn1_WP_5_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3548;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={16874.178,16.255737,14038.929};
+					name="rah_Benoma_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3549;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={16872.984,16.271624,14039.076};
+					name="rah_Benoma_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3550;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={16893.842,15.831084,14054.305};
+					name="rah_Benoma_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3551;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={16890.979,16.024822,14043.844};
+					name="rah_Benoma_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3552;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={16912.441,15.600517,14038.991};
+					name="rah_Benoma_Spawn2_WP_5_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3553;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={16148.148,78.483261,13573.676};
+					name="rah_Benoma_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3554;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={16444.35,66.11113,13950.113};
+					name="rah_Benoma_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3555;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={15000.464,0,16348.173};
+					name="rah_Benoma_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3556;
+					atlOffset=21.004139;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={18464.539,0,14853.719};
+					name="rah_Benoma_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3557;
+					atlOffset=24.746593;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={16055.409,64.894363,13593.411};
+					name="rah_Benoma_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3558;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={16490.25,66.588905,14006.481};
+					name="rah_Benoma_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3559;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={16578.633,65.291145,13822.868};
+					name="rah_Benoma_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3560;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={16088.945,46.909512,13865.877};
+					name="rah_Benoma_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3561;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={16373.704,48.328102,13664.471};
+					name="rah_Benoma_Extract_4";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3562;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={16508.232,55.353626,13920.556};
+					name="rah_Benoma_Extract_5";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3563;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={16074.931,59.594517,13651.636};
+					name="rah_Benoma_Extract_6";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3564;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={15827.674,70.473778,13648.813};
+					name="rah_Benoma_Spawn1_WP_1_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3565;
+					atlOffset=-5.742363;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={15984.937,77.01368,13519.072};
+					name="rah_Benoma_Spawn1_WP_1_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3566;
+					atlOffset=-5.742363;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={16174.307,69.230736,13496.138};
+					name="rah_Benoma_Spawn1_WP_1_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3567;
+					atlOffset=-5.742363;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={15735.938,56.057358,13788.384};
+					name="rah_Benoma_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3568;
+					atlOffset=6.4849854e-005;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={15954.14,57.680569,13675.024};
+					name="rah_Benoma_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3569;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={16090.434,59.280312,13697.304};
+					name="rah_Benoma_Spawn1_WP_2_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3570;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={15808.672,54.234802,13797.559};
+					name="rah_Benoma_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3571;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={16001.974,56.314278,13720.894};
+					name="rah_Benoma_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3572;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={16108.125,58.856377,13727.446};
+					name="rah_Benoma_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3573;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={15789.013,57.318916,13899.126};
+					name="rah_Benoma_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3574;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={16110.747,48.973503,13897.814};
+					name="rah_Benoma_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3575;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={15775.631,59.297432,13916.689};
+					name="rah_Benoma_Spawn1_WP_5_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3576;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={16097.598,59.597427,13976.551};
+					name="rah_Benoma_Spawn1_WP_5_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3577;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={16296.684,58.481613,13589.725};
+					name="rah_Benoma_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3578;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={16645.32,52.652546,13787.922};
+					name="rah_Benoma_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3579;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={16554.58,66.394028,13898.96};
+					name="rah_Benoma_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3580;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={16263.252,56.107693,13933.586};
+					name="rah_Benoma_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3581;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={16048.339,51.89323,13896.572};
+					name="rah_Benoma_Spawn1_paradrop_6";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3582;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={16228.627,57.105621,13778.369};
+					name="rah_Benoma_Spawn1_paradrop_7";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3583;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={16709.807,55.342422,14073.057};
+					name="rah_Benoma_Spawn2_WP_1_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3584;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={16598.414,97.169662,14078.299};
+					name="rah_Benoma_Spawn2_WP_1_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3585;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={16458.188,70.29892,14005.564};
+					name="rah_Benoma_Spawn2_WP_1_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3586;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={16729.992,51.638367,14069.625};
+					name="rah_Benoma_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3587;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={16618.654,85.507347,14050.555};
+					name="rah_Benoma_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3588;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={16388.25,61.81805,14036.121};
+					name="rah_Benoma_Spawn2_WP_2_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3589;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={16282.066,62.558861,13975.298};
+					name="rah_Benoma_Spawn2_WP_2_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3590;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={16732.742,54.30579,13815.21};
+					name="rah_Benoma_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3591;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={16427.223,52.51466,13792.848};
+					name="rah_Benoma_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3592;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={16873.922,19.085402,13819.764};
+					name="rah_Benoma_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3593;
+				};
+				class Item58
+				{
+					dataType="Marker";
+					position[]={16760.594,61.609665,13664.012};
+					name="rah_Benoma_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3594;
+				};
+				class Item59
+				{
+					dataType="Marker";
+					position[]={16678.068,52.425594,13607.059};
+					name="rah_Benoma_Spawn2_WP_4_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3595;
+				};
+				class Item60
+				{
+					dataType="Marker";
+					position[]={16445.604,56.397312,13528.018};
+					name="rah_Benoma_Spawn2_WP_4_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3596;
+				};
+				class Item61
+				{
+					dataType="Marker";
+					position[]={16323.56,55.541676,13545.454};
+					name="rah_Benoma_Spawn2_WP_4_6";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3597;
+				};
+				class Item62
+				{
+					dataType="Marker";
+					position[]={16955.871,49.520653,13824.994};
+					name="rah_Benoma_Spawn2_WP_5_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3598;
+				};
+				class Item63
+				{
+					dataType="Marker";
+					position[]={16954.129,58.722111,13619.843};
+					name="rah_Benoma_Spawn2_WP_5_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3599;
+				};
+				class Item64
+				{
+					dataType="Marker";
+					position[]={16667.615,59.034496,13537.316};
+					name="rah_Benoma_Spawn2_WP_5_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3600;
+				};
+				class Item65
+				{
+					dataType="Marker";
+					position[]={16249.757,64.643753,13538.479};
+					name="rah_Benoma_Spawn2_WP_5_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3601;
+				};
+				class Item66
+				{
+					dataType="Marker";
+					position[]={16182.342,73.324249,13601.826};
+					name="rah_Benoma_Spawn2_WP_5_6";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3602;
+				};
+				class Item67
+				{
+					dataType="Marker";
+					position[]={16374.604,51.485664,13617.613};
+					name="rah_Benoma_Spawn2_paradrop_2";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3603;
+					atlOffset=8.392334e-005;
+				};
+				class Item68
+				{
+					dataType="Marker";
+					position[]={16661.344,48.415913,13698.385};
+					name="rah_Benoma_Spawn2_paradrop_3";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3604;
+				};
+				class Item69
+				{
+					dataType="Marker";
+					position[]={16141.713,65.189568,13687.616};
+					name="rah_Benoma_Spawn2_paradrop_4";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3605;
+				};
+				class Item70
+				{
+					dataType="Marker";
+					position[]={16204.984,53.254761,13892.236};
+					name="rah_Benoma_Spawn2_paradrop_5";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3606;
+				};
+				class Item71
+				{
+					dataType="Marker";
+					position[]={16027.286,63.129482,13652.615};
+					name="rah_Benoma_Spawn2_paradrop_6";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3607;
+				};
+				class Item72
+				{
+					dataType="Marker";
+					position[]={16532.41,46.032902,13674.582};
+					name="rah_Benoma_Spawn2_paradrop_7";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3608;
+				};
+			};
+			id=3535;
+			atlOffset=2.1433411;
+		};
+		class Item20
+		{
+			dataType="Layer";
+			name="R&H_TresVales";
+			state=1;
+			class Entities
+			{
+				items=58;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={17917.76,68.54541,12268.449};
+					name="rah_TresVales_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3610;
+					atlOffset=-1.310112;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={17712.734,64.5914,12420.071};
+					name="rah_TresVales_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3611;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={17801.666,58.365234,12340.411};
+					name="rah_TresVales_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3612;
+					atlOffset=-6.614769;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={17866.436,57.95752,12260.717};
+					name="rah_TresVales_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3613;
+					atlOffset=-14.482742;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={17710.213,65.223389,12380.175};
+					name="rah_TresVales_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3614;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={17757.172,126.92653,12147.95};
+					name="rah_TresVales_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3615;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={17919.908,201.91357,11477.585};
+					name="rah_TresVales_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					id=3616;
+					atlOffset=-1.3462372;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={17389.898,42.010464,12888.206};
+					name="rah_TresVales_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=137.0408;
+					id=3617;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={17919.438,183.45949,11527.805};
+					name="rah_TresVales_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3618;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={17910.91,182.28029,11526.687};
+					name="rah_TresVales_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3619;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={17869.643,179.31738,11514.298};
+					name="rah_TresVales_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3620;
+					atlOffset=-5.7627258;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={17886.059,171.42969,11526.095};
+					name="rah_TresVales_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3621;
+					atlOffset=-7.7191162;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={17304.104,54.017807,12825.123};
+					name="rah_TresVales_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3623;
+					atlOffset=-45.566299;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={17415.633,42.987728,12826.004};
+					name="rah_TresVales_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3624;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={17518.047,71.287109,12816.141};
+					name="rah_TresVales_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3625;
+					atlOffset=-14.644836;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={17482.063,70.783569,12860.252};
+					name="rah_TresVales_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3626;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={18069.119,194.02441,12530.139};
+					name="rah_TresVales_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3628;
+					atlOffset=-2.5902405;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={17430.857,155.79883,12296.618};
+					name="rah_TresVales_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3629;
+					atlOffset=-20.732117;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={19417.02,-0.78515625,12830.018};
+					name="rah_TresVales_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3630;
+					atlOffset=17.930901;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={19477.494,-19.636806,12678.9};
+					name="rah_TresVales_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3631;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={17857.943,95.390381,12035.825};
+					name="rah_TresVales_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3632;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={17804.064,226.9473,10859.295};
+					name="rah_TresVales_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3633;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={18169.322,96.60611,12247.365};
+					name="rah_TresVales_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3634;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={17548.775,99.535706,12491.23};
+					name="rah_TresVales_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3635;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={18023.131,191.39659,12589.738};
+					name="rah_TresVales_Extract_4";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3636;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={18090.375,209.96344,11907.223};
+					name="rah_TresVales_Spawn1_WP_1_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3637;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={18199.988,184.26001,12033.11};
+					name="rah_TresVales_Spawn1_WP_1_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3638;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={18390.965,202.03044,12080.212};
+					name="rah_TresVales_Spawn1_WP_1_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3639;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={18372.98,189.14296,12352.543};
+					name="rah_TresVales_Spawn1_WP_1_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3640;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={17852.633,105.20345,11829.95};
+					name="rah_TresVales_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3641;
+					atlOffset=7.6293945e-006;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={17935.672,80.014999,12119.621};
+					name="rah_TresVales_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3642;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={17607.383,186.31018,11608.836};
+					name="rah_TresVales_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3643;
+					atlOffset=-5.7627258;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={17627.658,199.80817,11775.879};
+					name="rah_TresVales_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3644;
+					atlOffset=-5.7627258;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={17726.148,171.82861,12030.789};
+					name="rah_TresVales_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3645;
+					atlOffset=-5.7627258;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={17618.977,198.3632,11733.396};
+					name="rah_TresVales_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3646;
+					atlOffset=-7.7191162;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={17482.83,96.07444,11898.508};
+					name="rah_TresVales_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3647;
+					atlOffset=-7.7191162;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={17563.939,102.53625,12150.522};
+					name="rah_TresVales_Spawn1_WP_4_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3648;
+					atlOffset=-7.7191162;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={17599.666,81.941338,12273.149};
+					name="rah_TresVales_Spawn1_WP_4_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3649;
+					atlOffset=-7.7191162;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={18103.693,194.42477,12505.854};
+					name="rah_TresVales_Spawn1_WP_1_6";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3650;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={18258.047,193.80704,12380.331};
+					name="rah_TresVales_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3651;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={17798.436,64.950378,12440.196};
+					name="rah_TresVales_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3652;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={17499.109,83.229019,12475.923};
+					name="rah_TresVales_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3653;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={17982.859,187.42606,12629.448};
+					name="rah_TresVales_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3654;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={17719.26,178.11607,12030.795};
+					name="rah_TresVales_Spawn1_paradrop_6";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3655;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={17254.445,68.960907,12630.217};
+					name="rah_TresVales_Spawn2_WP_1_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3656;
+					atlOffset=-45.566299;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={17142.342,89.251984,12453.067};
+					name="rah_TresVales_Spawn2_WP_1_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3657;
+					atlOffset=-45.566299;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={17266.9,100.34618,12422.619};
+					name="rah_TresVales_Spawn2_WP_1_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3658;
+					atlOffset=-45.566292;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={17174.172,23.690041,12167.968};
+					name="rah_TresVales_Spawn2_WP_1_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3659;
+					atlOffset=-128.65048;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={17367.934,134.61182,12219.176};
+					name="rah_TresVales_Spawn2_WP_1_6";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3660;
+					atlOffset=-48.440659;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={17506.33,46.468449,12644.058};
+					name="rah_TresVales_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3661;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={17648.879,58.69241,12520.883};
+					name="rah_TresVales_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3662;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={17682.1,62.182938,12702.183};
+					name="rah_TresVales_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3663;
+					atlOffset=-14.644836;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={17709.779,51.596336,12566.553};
+					name="rah_TresVales_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3664;
+					atlOffset=-14.644836;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={17875.855,60.561386,12465.522};
+					name="rah_TresVales_Spawn2_WP_3_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3665;
+					atlOffset=-14.644836;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={17690.404,159.06854,12900.092};
+					name="rah_TresVales_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3666;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={17889.695,175.87541,12706.333};
+					name="rah_TresVales_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3667;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={17982.424,178.47862,12572.088};
+					name="rah_TresVales_Spawn2_WP_4_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3668;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={17902.152,74.075623,12406.01};
+					name="rah_TresVales_Spawn2_WP_4_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3669;
+				};
+			};
+			id=3609;
+			atlOffset=0.57883453;
 		};
 	};
 };

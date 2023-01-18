@@ -26,12 +26,17 @@ class int
 	{
 		file="functions\rush";
 		class build {};
-		class checkAMI {};
-		class checkENI {};
+		class hackComputer {};
 		class spawnFirstWave {};
 		class spawnReinf {};
 		class initHostileCompo {};
 	};
+
+	class loadout
+	{
+		file="loadout\functions";
+		class initLoadout {};
+	}
 
 };
 

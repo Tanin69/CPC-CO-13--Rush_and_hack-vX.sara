@@ -21,7 +21,7 @@
 
 hard_setLoadout = {
 
-	_unit = _this select 0;
+	params ["_unit"];
 	_loadout = _unit getVariable ["loadout","fsl"];
 
 	/* Change here for common loadout */
@@ -87,6 +87,7 @@ hard_setLoadout = {
 			case "at"   : {[_unit] call loadout_at};
 			case "gl"   : {[_unit] call loadout_gl};
 			case "tp"   : {[_unit] call loadout_tp};
+			case "explo": {[_unit] call loadout_explo};
 		};
 	/* call loadout per role. Don't change unless you want to add a new role */
 
@@ -135,7 +136,7 @@ hard_setLoadout = {
 		_binocCls= "CUP_Vector21Nite";
 		_backpackCls="CUP_B_ACRScout_m95_CZ805B";
 		_itemsB=[["CUP_30Rnd_556x45_Stanag",6,30],["CUP_H_CZ_Helmet04",1]];
-		_headgear="CUP_H_CZ_Cap_rgr"
+		_headgear="CUP_H_CZ_Cap_rgr";
 		[_unit] call setLoadOut;
 	};
 
@@ -228,6 +229,15 @@ hard_setLoadout = {
 		_itemsV=[["CUP_18Rnd_9x19_Phantom",4,18],["SmokeShell",2,1],["CUP_HandGrenade_M67",2,1],["CUP_20Rnd_TE1_Green_Tracer_762x51_HK417",2,20],["CUP_20Rnd_762x51_HK417",5,20]];		
 		[_unit] call setLoadOut;
 	};
+
+	loadout_explo = //
+	{
+		params["_unit"];
+		_backpackCls="CUP_B_ACRPara_m95_Explosives";
+		_itemsB=[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["ACE_M26_Clacker",1],["CUP_PipeBomb_M",1,1],["APERSBoundingMine_Range_Mag",2,1],["APERSMine_Range_Mag",5,1]];
+		[_unit] call setLoadOut;
+	};
+
 
 /* Add specific loadout per role by assigning an item/asset to the right variable */
 

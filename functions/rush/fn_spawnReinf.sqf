@@ -1,6 +1,5 @@
 /* Very basic perpetual reinforcements */
 
-
 //Wait for some players to walk out of the spawn area
 waituntil {goRush};
 
@@ -23,10 +22,11 @@ private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >
 	private _reinfBaseFreq = "180";
 	private _reinfAddFreq = "180";
 	private _reinfFreq = ["Reinforcements"] call BIS_fnc_getParamValue;
+	if (_reinfFreq isEqualTo 9) then {_reinfFreq = selectRandom [0,1,2]};
 	switch (_reinfFreq) do {
-		case 0:{_reinfBaseFreq = 300;_reinfAddFreq=180};
-		case 1:{_reinfBaseFreq = 180;_reinfAddFreq=180};
-		case 2:{_reinfBaseFreq = 120;_reinfAddFreq=180};
+		case 0:{_reinfBaseFreq = 420;_reinfAddFreq=180};
+		case 1:{_reinfBaseFreq = 300;_reinfAddFreq=180};
+		case 2:{_reinfBaseFreq = 180;_reinfAddFreq=180};
 	};
 	//Group size is balanced in spawnFisrtWave.sqf script, nb of groups as follow
 	private _nbJoueurs = playersNumber _AMISide;
@@ -34,7 +34,7 @@ private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >
 /* Difficulty management */
 
 //sleep 60;
-sleep (300 + random 180);
+sleep (600 + random 120);
 
 while {true} do {
 

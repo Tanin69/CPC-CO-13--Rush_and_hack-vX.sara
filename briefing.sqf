@@ -7,9 +7,9 @@ player createDiaryRecord ["Diary", ["Crédits", "
 
 Auteur : tanin69<br/><br/>
 
-Lucy et Vcom<br/><br/>
+Lucy et VCom (or not VCom)<br/><br/>
 
-Repo github : https://github.com/Tanin69/CPC-CO-13--Rush_and_hack-vX.sara
+Repo github : https://github.com/Tanin69/CPC-CO-15-Rush_and_hack-vX.sara
 
 "]];
 
@@ -52,9 +52,9 @@ Si la faction ennemie prend le contrôle de la zone PC et la tient pendant 5 min
 //Situation
 player createDiaryRecord ["Diary", ["Situation", "
 
-Le temps pour arriver sur la zone est approximativement le même pour vous et les ennemis, soit environ 5 minutes de course.<br/><br/>
+Le temps pour arriver sur la zone est approximativement le même pour vous et les ennemis, soit environ 5 minutes de course, sauf si vous avez ajouté un délai supplémentaire pour les rush des ennemis.<br/><br/>
 
-<font color='#ffa500'>Attention : le rush des ennemis démarre dès qu'un joueur (non IA) est sorti de la zone délimitée au point d'apparition.</font color><br/><br/>
+Le chrono démarre dès qu'un joueur (mais pas une IA) est sorti de la zone de spawn.
 
 "]]; 
 
@@ -67,7 +67,7 @@ Vous êtes insérés dans <marker name='marker_spawn_joueurs'>un avant-poste</ma
 
 Des renforts ennemis partent <marker name ='marker_spawn_AI'>de cette position</marker> et rushent sur la zone pour détruire les données afin qu'elles ne tombent pas entre vos mains.<br/><br/>
 
-Faction jouée : FS Tchèques (CUP)<br/>
-Faction ENI : MSV (CUP)<br/>
+Faction jouée : Voir les paramètres<br/>
+Faction ENI : Voir les paramètres<br/>
 
 "]];

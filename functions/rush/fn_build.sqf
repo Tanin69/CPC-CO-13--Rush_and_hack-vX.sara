@@ -3,21 +3,26 @@
 private _spawnData = [];
 private _objData = [];
 
+buildOK = false; //for synchronisation with init.sqf
+
 combatZone = "";
 private _chosenCombatZone = ["CombatZone"] call BIS_fnc_getParamValue;
 switch (_chosenCombatZone) do {
-	case 0: {combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete","Obregan"]};
+	case 0: {combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete","Obregan","Eponia","Pesto","Benoma","TresVales"]};
 	case 1: {combatZone = "Acorcha"};
 	case 2: {combatZone = "Bagango"};
 	case 3: {combatZone = "Masbete"};
 	case 4: {combatZone = "Obregan"};
 	case 5: {combatZone = "Yoro"};
+	case 6: {combatZone = "Eponia"};
+	case 7: {combatZone = "Pesto"};
+	case 8: {combatZone = "Benoma"};
+	case 9: {combatZone = "TresVales"};
 };
 
 /*Test only
 combatZone = "Obregan";
 */
-
 publicVariable "combatZone";
 
 /* build objective */
@@ -47,11 +52,19 @@ publicVariable "combatZone";
 	private _trg = createTrigger ["EmptyDetector", objectivePos];
 	_trg setTriggerArea [20, 20, 0, false, 0];
 	_trg setTriggerActivation ["WEST SEIZED", "PRESENT", true];
-	_trg setTriggerStatements ["this", "systemChat 'Les joueurs ont pris le contrôle de la zone du PC';seizedByAMI = true;isHackable = true;publicVariable 'seizedByAMI';publicVariable 'isHackable'", "systemChat 'Les joueurs ont perdu le contrôle de la zone du PC';seizedByAMI = false;isHackable = false;publicVariable 'seizedByAMI';publicVariable 'isHackable'"];
+	_trg setTriggerStatements [
+		"this", 
+		"if (!hackingDone) then {systemChat 'Les JOUEURS ont PRIS le contrôle de la zone du PC'};seizedByAMI=true;isHackable=true;publicVariable 'seizedByAMI';publicVariable 'isHackable';",
+		"if (!hackingDone) then {systemChat 'Les JOUEURS ont PERDU le contrôle de la zone du PC'};seizedByAMI=false;isHackable=false;publicVariable 'seizedByAMI';;publicVariable 'isHackable';"
+	];
 	_trg = createTrigger ["EmptyDetector", objectivePos];
 	_trg setTriggerArea [20, 20, 0, false, 0];
 	_trg setTriggerActivation ["EAST SEIZED", "PRESENT", true];
-	_trg setTriggerStatements ["this", "'La zone du PC est contrôlée par les hostiles !' remoteExec ['systemChat'];seizedByENI = true;isHackable = false;publicVariable 'seizedByENI';publicVariable 'isHackable';[]spawn int_fnc_checkENI;", "'Les hostiles ont perdu le contrôle de la zone du PC !' remoteExec ['systemChat'];seizedByENI=false;isHackable = true;publicVariable 'seizedByENI';publicVariable 'isHackable'"];
+	_trg setTriggerStatements [
+		"this",
+		"if (!hackingDone) then {'Les HOSTILES ont PRIS le contrôle de la zone du PC !' remoteExec ['systemChat']};seizedByENI=true;isHackable=false;publicVariable 'seizedbyENI';publicVariable 'isHackable';['ENI']spawn int_fnc_hackComputer;",
+		"if (!hackingDone) then {'Les HOSTILES ont PERDU le contrôle de la zone du PC !' remoteExec ['systemChat']};seizedByENI=false;publicVariable 'seizedByENI';"
+	];
 
 	//Add heavy Weapon
 	private _heavyWeaponPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "Objectives" >> "heavyWeaponPos");
@@ -67,7 +80,7 @@ publicVariable "combatZone";
 	_extractPos = selectRandom _extractPos;
 	_compReference = ["extraction_position", [_extractPos#0,_extractPos#1,0],nil,0] call LARs_fnc_spawnComp;
 	"marker_extract" setMarkerPos [_extractPos#0,_extractPos#1];
-
+	
 /* build extraction point */
 
 /* build spawn points */
@@ -108,6 +121,9 @@ publicVariable "combatZone";
 	private _AISpawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "spawnPos");
 	_AISpawnPos = _AISpawnPos#0;
 	"marker_spawn_AI" setMarkerPos [_AISpawnPos#0,_AISpawnPos#1];
+
+	buildOK = true;
+	publicVariable "buildOK";
 
 	sleep 10;
 	{_x allowdamage true} forEach _allPlayers;
