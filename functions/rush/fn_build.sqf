@@ -8,7 +8,7 @@ buildOK = false; //for synchronisation with init.sqf
 combatZone = "";
 private _chosenCombatZone = ["CombatZone"] call BIS_fnc_getParamValue;
 switch (_chosenCombatZone) do {
-	case 0: {combatZone = selectRandom ["Bagango","Yoro","Acorcha","Masbete","Obregan","Eponia","Pesto","Benoma","TresVales"]};
+	case 0: {combatZone = selectRandom ["Acorcha","Bagango", "Masbete","Obregan","Yoro","Eponia","Pesto","Benoma","TresVales"]};
 	case 1: {combatZone = "Acorcha"};
 	case 2: {combatZone = "Bagango"};
 	case 3: {combatZone = "Masbete"};
@@ -73,6 +73,14 @@ publicVariable "combatZone";
 	HeavyWeapon = createVehicle [_heavyWeaponCls, _heavyWeaponPos, [], 0, "NONE"];
 
 /* build objective */
+
+/* build player presence trigger */
+	//This trigger ensures that the reinforcement timer is triggered only when players are close enough to the objective (300 m. from objective)
+	_trg = createTrigger ["EmptyDetector", objectivePos];
+	_trg setTriggerArea [300, 300, 0, false];
+	_trg setTriggerActivation ["ANYPLAYER", "PRESENT", false];
+	_trg setTriggerStatements ["this", "hint 'Player in area: reinforcement timer triggered';playerPresent=true;publicVariable 'playerPresent'",""];
+/* build player presence trigger*/
 
 /* build extraction point */
 

@@ -28,7 +28,7 @@ class items
 						flags=5;
 						class Attributes
 						{
-							name = "endFlag"
+							name = "endFlag";
 						};
 						id=131;
 						type="Flag_Red_F";

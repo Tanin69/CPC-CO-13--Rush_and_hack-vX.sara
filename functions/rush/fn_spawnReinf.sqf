@@ -1,12 +1,11 @@
 /* Very basic perpetual reinforcements */
 
-//Wait for some players to walk out of the spawn area
-waituntil {goRush};
-
-//Delay before rush (player choice)
 //_delayBeforeRush = 60;
 private _delayBeforeRush = ["DelayBeforeRush"] call BIS_fnc_getParamValue;
-waituntil { !(isNil "goRush") && !(isNil "timeGoRush") && {(time > (timeGoRush + _delayBeforeRush))}};
+//Delay before rush (player choice) and other conditions (players arrived near the objective, etc.)
+waituntil { !(isNil "goRush") && (playerPresent) && !(isNil "timeGoRush") && {(time > (timeGoRush + _delayBeforeRush))}};
+
+systemChat "Enfin, les conditions pour que les renforts soient lancés sont réunies !";
 
 private _grpDef = grpDef;
 private _ENIside = opfor;
@@ -35,6 +34,8 @@ private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >
 
 //sleep 60;
 sleep (600 + random 120);
+
+systemChat "Ca devait arriver : la première vague de renfort est déclanchée";
 
 while {true} do {
 

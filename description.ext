@@ -10,7 +10,7 @@ class Header
 {
 	gameType = Coop; // MP mission type
 	minPlayers = 4;
-	maxPlayers = 15;
+	maxPlayers = 17;
 };
 
 // Affichage durant l'écran de chargement

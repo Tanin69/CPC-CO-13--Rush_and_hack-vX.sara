@@ -522,8 +522,5 @@ class CfgCombatZones
 			};
 		};
 	};
-
-
-
 };
 

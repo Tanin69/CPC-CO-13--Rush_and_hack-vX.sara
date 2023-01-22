@@ -6,6 +6,48 @@ TODO
 
 ## Changelog
 
+### v9, 22/01/2023
+
+#### Changed
+
+* Nothing
+
+#### Fixed
+
+* Medic ACE 'doctor' attribute correctly set for combat medic unit
+
+#### Added
+
+* 2 new maps : Virolati (7 areas configured) and Lingor (11 areas)
+
+### v8, 21/01/2023
+
+#### Changed
+
+* Nothing
+
+#### Fixed
+
+* Wrong combat zone configuration for Sahrani map
+
+#### Added
+
+* Nothing
+
+### v7, 19/01/23
+
+#### Changed
+
+* Reinforcement timer starts only when a player is near the objective (300 m. around)
+
+#### Fixed
+
+Nothing
+
+#### Added
+
+Nothing
+
 ### v6, 18/01/23
 
 #### Changed
