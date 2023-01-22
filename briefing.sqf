@@ -30,7 +30,9 @@ player createDiaryRecord ["Diary", ["Intel", "
 
 > Il y a une arme lourde abandonnée sur la zone. Les ennemis chercheront probablement à s'en emparer.<br/><br/>
 
-> Contrairement à vous, ils savent où se trouve le PC à hacker : ils tenteront probablement de prendre le contrôle de cette zone rapidement.<br/><br/>
+> Les ennemis savent où se trouve le PC à hacker : ils tenteront probablement de prendre le contrôle de cette zone rapidement.<br/><br/>
+
+> La position du PC est plus ou moins connue (selon les paramètres de mission)
 
 "]];
 
@@ -39,22 +41,22 @@ player createDiaryRecord ["Diary", ["Mission", "
 
 Récupérer les données et vous extraire.<br/><br/>
 
-> Les données sont dans un PC, lui-même enfermé dans un container vert. Il se trouve soit <marker name='marker_objectif_1'>sur cette position</marker>, soit <marker name='marker_objectif_2'>sur celle-ci</marker>, soit <marker name='marker_objectif_3'>sur celle-là</marker>.<br/><br/>
+> Les données sont dans un PC, lui-même enfermé dans un container vert.<br/><br/>
 
 > Pour déclencher le téléchargement (interaction ACE), vous devez contrôler la zone du PC dans un rayon de 20 mètres. Vous devez maintenir ce contrôle pendant 10 minutes. Toute perte de contrôle de cette zone annule et réinitialise le téléchargement.<br/><br/>
 
 > Une fois les données téléchargées, vous devez rejoindre le <marker name='marker_extract'>point d'extraction</marker>.<br/><br/>
 
-Si la faction ennemie prend le contrôle de la zone PC et la tient pendant 5 minutes continues, elle aura réussi à détruire les données. Dans ce cas, pour éviter une déroute complète, extrayez-vous au plus vite pour préserver vos effectifs.
+Si la faction ennemie prend le contrôle de la zone PC et la tient pendant un certain temps (selon les paramètres de mission) continu, elle aura réussi à détruire les données. Dans ce cas, pour éviter une déroute complète, extrayez-vous au plus vite pour préserver vos effectifs.
 
 "]];
 
 //Situation
 player createDiaryRecord ["Diary", ["Situation", "
 
-Le temps pour arriver sur la zone est approximativement le même pour vous et les ennemis, soit environ 5 minutes de course, sauf si vous avez ajouté un délai supplémentaire pour les rush des ennemis.<br/><br/>
+Le temps pour arriver sur la zone est approximativement le même pour vous et les ennemis, soit environ 5 minutes de course.<br/><br/>
 
-Le chrono démarre dès qu'un joueur (mais pas une IA) est sorti de la zone de spawn.
+Les ennemis rushent dès qu'un joueur huimain sort de la zone de spawn, avec un délai supplémentaire (ou pas)selon les paramètres de mission.
 
 "]]; 
 

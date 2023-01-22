@@ -32,22 +32,42 @@ publicVariable "combatZone";
 	_combatZoneMrk = _combatZoneMrk#0;
 	"marker_zone" setMarkerPos _combatZoneMrk;
 
-	//Objectives markers
-	private _objectivePos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "Objectives" >> "objectivePos");
-	for "_i" from 0 to (count _objectivePos) -1 do  {
-		_mrk = createMarker ["marker_objectif_" + str(_i+1),[(_objectivePos#_i)#0,(_objectivePos#_i)#1]];
-		_mrk setMarkerType "mil_unknown_noShadow";
-		_mrk setMarkerColor "ColorOrange";
-	};
-	
 	//Place the container and the computer - LARS spawn composition scripts : https://forums.bohemia.net/forums/topic/191902-eden-composition-spawning/
 	/*Test only
 	objectivePos = _objectivePos#2;
 	*/
+	private _objectivePos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "Objectives" >> "objectivePos");
 	objectivePos = selectRandom _objectivePos;
 	publicVariable "objectivePos";
 	private _compReference = ["container_computer", [objectivePos#0,objectivePos#1,0],nil,objectivePos#2] call LARs_fnc_spawnComp;
 
+	//Objectives markers
+	private _objectiveIntelLvl = ["ObjectiveIntelLevel"] call BIS_fnc_getParamValue;
+	switch (_objectiveIntelLvl) do {
+		case 1: {
+			private _mrkCenter =  [[[objectivePos, 150]],[]] call BIS_fnc_randomPos;
+			systemChat str [objectivePos#0,objectivePos#1];
+			systemChat str _mrkCenter;
+			_mrk = createMarker ["marker_objectif_1",_mrkCenter];
+			_mrk setMarkerShape "ELLIPSE";
+			_mrk setMarkerSize [200,200];
+			_mrk setMarkerColor "ColorOrange";
+			_mrk setMarkerAlpha 1;
+		};
+		case 2: {
+			for "_i" from 0 to (count _objectivePos) -1 do  {
+				_mrk = createMarker ["marker_objectif_" + str(_i+1),[(_objectivePos#_i)#0,(_objectivePos#_i)#1]];
+				_mrk setMarkerType "mil_unknown_noShadow";
+				_mrk setMarkerColor "ColorOrange";
+			};
+		};
+		case 3: {
+			_mrk = createMarker ["marker_objectif_1",[objectivePos#0,objectivePos#1,0]];
+			_mrk setMarkerType "mil_objective_noShadow";
+			_mrk setMarkerColor "ColorOrange";
+		};
+	};
+	
 	//Add triggers for computer hacking management
 	private _trg = createTrigger ["EmptyDetector", objectivePos];
 	_trg setTriggerArea [20, 20, 0, false, 0];

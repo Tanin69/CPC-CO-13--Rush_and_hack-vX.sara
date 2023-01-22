@@ -21,6 +21,13 @@ class params
 		values[] = {1,2,3,4};
 		default = 1;
 	};	
+	class ObjectiveIntelLevel
+	{
+		title = "Niveau d'intel sur la position de l'objectif";
+		texts[] = {"Zone de 400 m.","3 positions possibles (défaut)","position exacte connue"};
+		values[] = {1,2,3};
+		default = 2;
+	};
 	class BalanceOfPower
 	{
 		title = "Rapport de force initial";

@@ -21,6 +21,7 @@ switch (_AIBoost) do {
 	seizedByENI = false;
 	seizedByAMI = false;
 	goRush = false;
+	playerPresent = false;
 /* Global variables initialization */
 
 /* ENI groups def */

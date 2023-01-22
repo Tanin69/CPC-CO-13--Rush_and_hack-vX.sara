@@ -6,6 +6,20 @@ TODO
 
 ## Changelog
 
+### v10, 22/01/2023
+
+#### Changed
+
+* Nothing
+
+#### Fixed
+
+* A variable was missing in Sahrani mission code
+
+#### Added
+
+* New customizable value for intel on objective position : 400 m. area, 3 possible positions (default), exact position
+
 ### v9, 22/01/2023
 
 #### Changed

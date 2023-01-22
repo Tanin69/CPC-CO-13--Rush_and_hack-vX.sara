@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=1249;
+	toggles=1121;
 	class ItemIDProvider
 	{
 		nextID=3670;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=599;
+		nextID=631;
 	};
 	class Camera
 	{
 		pos[]={13710.771,509.74188,15327.265};
-		dir[]={-0.52349997,-0.46117327,-0.71646279};
-		up[]={-0.27208036,0.88730317,-0.37236905};
-		aside[]={-0.80744791,2.773013e-007,0.58998007};
+		dir[]={-0.52348703,-0.46116117,-0.7164439};
+		up[]={-0.27206966,0.88731635,-0.37235433};
+		aside[]={-0.80742776,0,0.58996654};
 	};
 };
 binarizationWanted=0;
@@ -646,11 +646,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14722.124,0,19729.498};
+				position[]={18265.721,0,18609.953};
 			};
 			id=15;
 			type="ModuleCurator_F";
-			atlOffset=85.655571;
+			atlOffset=21.869953;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -713,19 +713,19 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14007.77,0,19760.557};
+				position[]={17551.367,-12.446835,18641.012};
 			};
 			name="HC_Slot";
 			isPlayable=1;
 			description="HC_Slot";
 			id=126;
 			type="HeadlessClient_F";
-			atlOffset=101.25753;
+			atlOffset=37.471912;
 		};
 		class Item2
 		{
 			dataType="Trigger";
-			position[]={14297.654,-0.00028991699,19750.203};
+			position[]={17841.25,33.546368,18630.658};
 			class Attributes
 			{
 				text="Déclarer l'échec de la mission";
@@ -736,7 +736,7 @@ class Mission
 			};
 			id=127;
 			type="EmptyDetector";
-			atlOffset=98.276001;
+			atlOffset=34.490383;
 		};
 		class Item3
 		{
@@ -2751,7 +2751,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="RushAndHack";
-			state=1;
 			class Entities
 			{
 				items=1;
@@ -2759,46 +2758,46 @@ class Mission
 				{
 					dataType="Layer";
 					name="Perma_Markers";
+					state=1;
 					class Entities
 					{
 						items=4;
 						class Item0
 						{
 							dataType="Marker";
-							position[]={14390.977,-53.056717,19156.211};
+							position[]={17428.25,65.264656,18053.418};
 							name="marker_spawn_AI";
 							text="Eux";
 							type="mil_start";
 							colorName="ColorCIV";
 							id=1;
-							atlOffset=42.372284;
 						};
 						class Item1
 						{
 							dataType="Marker";
-							position[]={14598.657,204.59517,19161.002};
+							position[]={17635.93,217.71164,18058.209};
 							name="marker_spawn_joueurs";
 							text="Vous";
 							type="mil_start";
 							colorName="ColorUNKNOWN";
 							id=0;
-							atlOffset=288.95416;
+							atlOffset=183.53879;
 						};
 						class Item2
 						{
 							dataType="Marker";
-							position[]={14800.63,-12.159668,19142.479};
+							position[]={17837.902,-12.159668,18039.686};
 							name="marker_extract";
 							text="Extraction";
 							type="mil_end";
 							colorName="ColorYellow";
 							id=129;
-							atlOffset=65.652611;
+							atlOffset=-39.76276;
 						};
 						class Item3
 						{
 							dataType="Marker";
-							position[]={14068.575,-80.475067,19221.75};
+							position[]={17648.055,-80.475067,18040.844};
 							name="marker_zone";
 							markerType="ELLIPSE";
 							type="";
@@ -2806,15 +2805,15 @@ class Mission
 							a=242.26199;
 							b=239.30701;
 							id=107;
-							atlOffset=22.419571;
+							atlOffset=-126.74136;
 						};
 					};
 					id=1880;
-					atlOffset=72.530685;
+					atlOffset=-55.831524;
 				};
 			};
 			id=1879;
-			atlOffset=72.530685;
+			atlOffset=-55.831524;
 		};
 		class Item13
 		{
