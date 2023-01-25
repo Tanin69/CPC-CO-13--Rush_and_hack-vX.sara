@@ -6,12 +6,7 @@
 	Loadouts de la mission
 
 *** Utilisation :
-	1/ Copiez les fichiers 'loadout.sqf', 'initPlayerLocal.sqf' et 'inventory_briefing.sqf' dans le dossier de votre mission.
-	2/ Modifiez le fichier loadout.sqf à votre convenance.
-		- Vous pouvez creer vos loadouts dans l'arsenal virtuel de Arma 3, les exporter avec la commande ingame et les coller dans le script comme ci-dessous.
-		- Une fois ceci fait, remplacez tout les 'this' par '_unit'.
-	3/ Dans l'éditeur, placez la commande ci-dessous dans les init d'unités jouables pour leur attribuer le loadout souhaité :
-		this setVariable ["loadout", "cc_sl"];
+		this setVariable ["loadout", "sl"];
 
 *** Le format du loadout est un tableau documenté à https://community.bistudio.com/wiki/Unit_Loadout_Array. Il peut être exporté par l'arsenal ACE
 -------------------------------------------------------------------------------------------------------------------------------------------------------------

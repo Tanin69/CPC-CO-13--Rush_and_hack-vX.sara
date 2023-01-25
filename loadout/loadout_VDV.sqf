@@ -6,11 +6,6 @@
 	Loadouts de la mission
 
 *** Utilisation :
-	1/ Copiez les fichiers 'loadout.sqf', 'initPlayerLocal.sqf' et 'inventory_briefing.sqf' dans le dossier de votre mission.
-	2/ Modifiez le fichier loadout.sqf à votre convenance.
-		- Vous pouvez creer vos loadouts dans l'arsenal virtuel de Arma 3, les exporter avec la commande ingame et les coller dans le script comme ci-dessous.
-		- Une fois ceci fait, remplacez tout les 'this' par '_unit'.
-	3/ Dans l'éditeur, placez la commande ci-dessous dans les init d'unités jouables pour leur attribuer le loadout souhaité :
 		this setVariable ["loadout", "sl"];
 
 *** Le format du loadout est un tableau documenté à https://community.bistudio.com/wiki/Unit_Loadout_Array. Il peut être exporté par l'arsenal ACE
@@ -26,13 +21,13 @@ hard_setLoadout = {
 	
 	/* Change here for common loadout */
 		//Primary weapon configuration
-		_primaryWeapon    = "CUP_arifle_L85A2_G";     			//weapon class name
-		_pwMuzzleAtt      = "";	                      			//muzzle attachment
-		_pwPointer        = ""; 			 					//pointer
-		_pwOptic          = "cup_optic_elcan_reflex"; 			//optic
-		_pwMagFirstAmmo   = ["CUP_30Rnd_556x45_Stanag_L85",30]; //loaded ammo for first muzzle : mag class name + ammo
-		_pwMagSecondAmmo  = [];									//loaded ammo for second muzzle : mag class name + ammo
-		_pwBipod          = "";		  							//bipod
+		_primaryWeapon    = "CUP_arifle_AK74M_1p63";
+		_pwMuzzleAtt      = "";	//muzzle attachment
+		_pwPointer        = ""; //pointer
+		_pwOptic          = "CUP_optic_1p63";
+		_pwMagFirstAmmo   = ["CUP_30Rnd_545x39_AK74M_M",30];
+		_pwMagSecondAmmo  = [];	//loaded ammo for second muzzle : mag class name + ammo
+		_pwBipod          = "";	//bipod
 		//Secondary weapon configuration : same structure as primary weapon
 		_secondaryWeapon  = "";
 		_swMuzzleAtt      = "";
@@ -42,24 +37,24 @@ hard_setLoadout = {
 		_swMagSecondAmmo  = [];
 		_swBipod          = "";
 		//Handgun weapon configuration : same structure as primary weapon
-		_handgun          = "CUP_hgun_Glock17_blk";
+		_handgun          = "hgun_Rook40_F";
 		_hgMuzzleAtt      = "";
 		_hgPointer        = ""; 			 					
 		_hgOptic          = "";
-		_hgMagFirstAmmo   = ["CUP_17Rnd_9x19_glock17",17];
+		_hgMagFirstAmmo   = ["16Rnd_9x21_Mag",17];
 		_hgMagSecondAmmo  = [];
 		_hgBipod          = "";
 		//Uniform configuration
-		_uniformCls       = selectRandom ["CUP_U_B_BAF_DPM_UBACSLONG","CUP_U_B_BAF_DPM_UBACSLONG_Gloves","CUP_U_B_BAF_DPM_UBACSLONGKNEE","CUP_U_B_BAF_DPM_UBACSLONGKNEE_Gloves","CUP_U_B_BAF_DPM_UBACSROLLED","CUP_U_B_BAF_DPM_UBACSTSHIRTKNEE"];//uniform class name
-		_itemsU           = [["ACE_fieldDressing",4],["ACE_tourniquet",1],["ACE_EarPlugs",1],["ACRE_PRC343",1],["ACE_CableTie",1]]; //uniform inventory
+		_uniformCls       = selectRandom ["CUP_U_O_RUS_Soldier_VKPO_VDV_EMR_gloves_pads","CUP_U_O_RUS_Soldier_VKPO_VDV_EMR_rolled_up_gloves_pads"]; //uniform class name
+		_itemsU           = [["ACE_fieldDressing",4],["ACE_tourniquet",1],["ACE_EarPlugs",1],["ACRE_PRC343",1],["ACE_CableTie",1],["SmokeShell",2,1],["16Rnd_9x21_Mag",2,17]];
 		//Vest configuration : same structure as uniform
-		_vestCls          = "CUP_V_B_BAF_DPM_Osprey_Mk3_Empty";
-		_itemsV           = [["CUP_HandGrenade_L109A1_HE",2,1],["SmokeShell",2,1],["CUP_30Rnd_556x45_Stanag_L85",10,30],["CUP_17Rnd_9x19_glock17",2,17]];
+		_vestCls          = "CUP_Vest_RUS_6B45_Sh117_Nut";
+		_itemsV           = [["CUP_30Rnd_545x39_AK74M_M",10,30],["CUP_HandGrenade_RGD5",2,1]];
 		//Backpack configuration : same structure as uniform
 		_backpackCls      = "";
 		_itemsB           = [];
 		//Other configuration
-		_headgear         = "CUP_H_BAF_DPM_Mk6_EMPTY";
+		_headgear         = selectRandom ["CUP_H_RUS_6B47_v2_GogglesUp_Summer","CUP_H_RUS_6B47_v2_GogglesDown_Summer","CUP_H_RUS_6B47_v2_GogglesClosed_Summer","CUP_H_RUS_6B47_v2_Summer"];
 		_facewear         = "";
 		//Binocular config : same structure as weapons !
 		_binocCls         = "";
@@ -108,133 +103,127 @@ hard_setLoadout = {
 		//copyToClipboard str _loArray;
 		_unit setUnitLoadout _loArray;
 	};
-/* Helper private function to esay set loadout */
+/* Helper function to esay set loadout */
 
 /* Add specific loadout per role by assigning an item/asset to the right variable */
 
 	loadout_off = //
 	{
 		params["_unit"];
-		_headgear="CUP_H_BAF_PARA_PRROVER_BERET";
-		_itemsU = _itemsU + [["ACRE_PRC148",1],["ACE_microDAGR",1]];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Officer";
-		_backpackCls="B_AssaultPack_rgr";
-		_itemsB=[["CUP_H_BAF_DPM_Mk6_NETTING_PRR",1]];
-		_binocCls="CUP_Vector21Nite";
+		_primaryWeapon="CUP_arifle_AKS74U";
+		_pwMuzzleAtt="";
+		_pwPointer="";
+		_pwOptic="";
+		_pwMagFirstAmmo=["CUP_30Rnd_545x39_AK74_plum_M",30];
+		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_itemsV=[["CUP_30Rnd_545x39_AK74_plum_M",8,30],["CUP_HandGrenade_RGD5",2,1]];
+		_binocCls="RangeFinder";		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_sl = //
 	{
 		params["_unit"];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Officer";
-		_itemsU = _itemsU + [["ACRE_PRC148",1],["ACE_microDAGR",1]];
-		_binocCls="Binocular";
-		_headgear="CUP_H_BAF_DPM_Mk6_EMPTY_PRR";
+		_primaryWeapon="CUP_arifle_AK74M_pso_open";
+		_pwOptic="CUP_optic_PSO_1_AK_open";
+		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_binocCls="Binocular";		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_tl = //
 	{
 		params["_unit"];
-		_primaryWeapon="CUP_arifle_L85A2_GL_Elcan_Laser";
-		_pwMagSecondAmmo=["CUP_1Rnd_HE_M203",1];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Grenadier";
-		_itemsU = _itemsU + [["ACRE_PRC148",1]];
-		_backpackCls="CUP_B_Motherlode_MTP";
-		_itemsB = [["CUP_1Rnd_HE_M203",10,1],["CUP_1Rnd_SmokeGreen_M203",1,1],["CUP_1Rnd_SmokeRed_M203",1,1],["CUP_HandGrenade_L109A2_HE",3,1]];
-		_binocCls="Binocular";
+		_primaryWeapon="CUP_arifle_AK74M_GL_pso_open";
+		_pwOptic="CUP_optic_PSO_1_AK_open";
+		_pwMagSecondAmmo=["CUP_1Rnd_HE_GP25_M",1];
+		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_itemsV=[["CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M",7,30],["CUP_HandGrenade_RGD5",2,1],["CUP_1Rnd_HE_GP25_M",9,1]];
+		_binocCls="Binocular";		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_fsl = //
 	{
-		params["_unit"];
+		params["_unit"];		
 		[_unit] call setLoadOut;
 	};
-
 	loadout_medic = //
 	{
 		params["_unit"];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Medic";
-		_backpackCls="CUP_B_Motherlode_Medic_MTP";
-		_itemsB=[["Medikit",1],["FirstAidKit",15],["ACE_surgicalKit",1],["ACE_splint",8],["ACE_salineIV",3],["ACE_salineIV_250",2],["ACE_salineIV_500",6],["ACE_tourniquet",4],["ACE_morphine",8],["ACE_epinephrine",6],["ACE_packingBandage",15],["ACE_fieldDressing",10],["ACE_elasticBandage",15],["ACE_quikclot",10]];
+		_backpackCls="CUP_O_RUS_Patrol_bag_Summer_Medic";
+		_itemsB=[["Medikit",1],["FirstAidKit",10],["ACE_surgicalKit",1],["ACE_splint",8],["ACE_salineIV",3],["ACE_salineIV_250",2],["ACE_salineIV_500",6],["ACE_tourniquet",4],["ACE_morphine",8],["ACE_epinephrine",6],["ACE_packingBandage",15],["ACE_fieldDressing",10],["ACE_elasticBandage",15],["ACE_quikclot",10]];		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_ar = //
 	{
 		params["_unit"];
-		_primaryWeapon="CUP_lmg_minimipara";	
-		_pwMagFirstAmmo=["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",200];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_AutomaticRifleman";
-		_itemsV=[["CUP_100Rnd_TE4_Red_Tracer_556x45_M249",4,100]];
+		_primaryWeapon="CUP_arifle_RPK74M_1p78";
+		_pwOptic="CUP_optic_PechenegScope";
+		_pwMagFirstAmmo=["CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK74M_M",45];
+		_itemsV=[["CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK74M_M",9,45],["CUP_HandGrenade_RGD5",2,1]];
+		_binocCls="Binocular";	
 		[_unit] call setLoadOut;
 	};
 
 	loadout_mg = //
 	{
 		params["_unit"];
-		_primaryWeapon="CUP_lmg_L7A2";
-		_pwMagFirstAmmo=["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",100];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_AutomaticRifleman";
-		_itemsV=[["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",2,100]];
-		_backpackCls="B_AssaultPack_rgr";
-		_itemsB=[["CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",2,100]];
+		_primaryWeapon="CUP_lmg_Pecheneg_PScope";
+		_pwOptic="CUP_optic_PechenegScope";
+		_pwMagFirstAmmo=["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",100];
+		_vestCls="CUP_Vest_RUS_6B45_Sh117_PKP";
+		_itemsV=[["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",3,100],["CUP_HandGrenade_RGD5",2,1]];		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_lat = //
 	{
 		params["_unit"];
-		_secondaryWeapon="CUP_launch_M136";
+		_secondaryWeapon="CUP_launch_RPG26";		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_at = //
 	{
 		params["_unit"];
-		_secondaryWeapon="CUP_launch_NLAW";
+		_secondaryWeapon="CUP_launch_RPG7V_PGO7V3";
+		_swOptic="CUP_optic_PGO7V3";
+		_swMagFirstAmmo=["CUP_PG7VL_M",1];
+		_backpackCls="CUP_B_RUS_Pack_AT";
+		_itemsB=[["CUP_PG7VL_M",1,1],["CUP_PG7VR_M",1,1]];		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_gl = //
 	{
 		params["_unit"];
-		_primaryWeapon="CUP_arifle_L85A2_GL_Elcan_Laser";
-		_pwMagSecondAmmo=["CUP_1Rnd_HE_M203",1];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Grenadier";
-		_itemsV = _itemsV + [["CUP_1Rnd_HE_M203",10,1],["CUP_HandGrenade_L109A2_HE",5,1]];
+		_primaryWeapon="CUP_arifle_AK74M_GL_1p63";
+		_pwOptic="CUP_optic_1p63";
+		_pwMagSecondAmmo=["CUP_1Rnd_HE_GP25_M",1];
+		_itemsV=[["CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M",7,30],["CUP_HandGrenade_RGD5",2,1],["CUP_1Rnd_HE_GP25_M",12,1]];		
 		[_unit] call setLoadOut;
 	};
 
 	loadout_tp = //
 	{
 		params["_unit"];
-		_primaryWeapon="CUP_srifle_L129A1_HG_TA648_Bipod_w";
-		_pwMuzzleAtt="";
-		_pwPointer="CUP_acc_LLM";
-		_pwOptic="CUP_optic_ACOG_TA648_308_RDS_Wdl";
-		_pwMagFirstAmmo=["CUP_20Rnd_762x51_L129_M",20];
-		_pwMagSecondAmmo=[];
-		_pwBipod="CUP_bipod_Harris_1A2_L_BLK";
-		_handgun="CUP_hgun_Glock17_blk";
-		_hgMagFirstAmmo=["CUP_17Rnd_9x19_glock17",17];
-		_itemsU = _itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1],["ACE_RangeCard",1]];
-		_vestCls="CUP_V_B_BAF_DPM_Osprey_Mk3_Scout";
-		_itemsV=[["CUP_HandGrenade_L109A1_HE",1,1],["SmokeShell",3,1],["CUP_17Rnd_9x19_glock17",3,17],["CUP_20Rnd_762x51_L129_M",6,20]];
-		_binocCls="CUP_Vector21Nite";
-		[_unit] call setLoadOut;
-	};
-	
-	loadout_explo = //
-	{
-		params["_unit"];
-		_backpackCls="CUP_B_Bergen_BAF";
-		_itemsB=[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["ACE_M26_Clacker",1],["CUP_PipeBomb_M",1,1],["APERSBoundingMine_Range_Mag",2,1],["APERSMine_Range_Mag",5,1]];
+		_primaryWeapon="CUP_srifle_SVD_pso";
+		_pwOptic="CUP_optic_PSO_1";
+		_pwMagFirstAmmo=["CUP_10Rnd_762x54_SVD_M",10];
+		_itemsU=_itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1],["ACE_RangeCard",1]];
+		_itemsV=[["CUP_10Rnd_762x54_SVD_M",14,10],["CUP_HandGrenade_RGD5",2,1]];		
 		[_unit] call setLoadOut;
 	};
 
+	loadout_explo = //
+	{
+		params["_unit"];
+		_backpackCls="CUP_O_RUS_Patrol_bag_Summer_Shovel_Exp";
+		_itemsB=[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["ACE_M26_Clacker",1],["CUP_PipeBomb_M",1,1],["APERSBoundingMine_Range_Mag",2,1],["APERSMine_Range_Mag",5,1]];		
+		[_unit] call setLoadOut;
+	};
 
 /* Add specific loadout per role by assigning an item/asset to the right variable */
 

@@ -45,7 +45,7 @@ class factions
 		sl = "CUP_O_RU_Soldier_SL_M_EMR_V2";
 		medic = "CUP_O_RU_Soldier_Medic_M_EMR_V2";
 	};
-	class 3 //Sahrani Army
+	class 3 //Sahrani Liberation Army
 	{
 		fsl_1 = "CUP_O_sla_Soldier";
 		fsl_2 = "CUP_O_SLA_Soldier_Backpack";
@@ -59,5 +59,65 @@ class factions
 		tl = "CUP_O_sla_Soldier_SL";
 		sl = "CUP_O_sla_Soldier_SL";
 		medic = "CUP_O_sla_Medic";
+	};
+	class 4 //ION PMC
+	{
+		fsl_1 = "CUP_I_PMC_Bodyguard_AA12";
+		fsl_2 = "CUP_I_PMC_Bodyguard_M4";
+		fsl_3 = "CUP_I_PMC_Contractor1";
+		lat = "CUP_I_PMC_Soldier_AT";
+		at = "CUP_I_PMC_Soldier_AT";
+		lmg = "CUP_I_PMC_Soldier_MG";
+		mg = "CUP_I_PMC_Soldier_MG_PKM";
+		mark = "CUP_I_PMC_Sniper";
+		gl = "CUP_I_PMC_Soldier_GL_M16A2";
+		tl = "CUP_I_PMC_Soldier_TL";
+		sl = "CUP_I_PMC_Soldier_TL";
+		medic = "CUP_I_PMC_Medic";
+	};
+	class 5 //US Army (OEF-CP)
+	{
+		fsl_1 = "CUP_B_US_Soldier_OEFCP";
+		fsl_2 = "CUP_B_US_Soldier_ACOG_OEFCP";
+		fsl_3 = "CUP_B_US_Soldier_Light_OEFCP";
+		lat = "CUP_B_US_Soldier_LAT_OEFCP";
+		at = "CUP_B_US_Soldier_AT_OEFCP";
+		lmg = "CUP_B_US_Soldier_AR_OEFCP";
+		mg = "CUP_B_US_Soldier_MG_OEFCP";
+		mark = "CUP_B_US_Soldier_Marksman_EBR_OEFCP";
+		gl = "CUP_B_US_Soldier_GL_OEFCP";
+		tl = "CUP_B_US_Soldier_TL_OEFCP";
+		sl = "CUP_B_US_Soldier_SL_OEFCP";
+		medic = "CUP_B_US_Medic_OEFCP";
+	};
+	class 6 //Ejercito
+	{
+		fsl_1 = "CPC_LAT_B_EJE_soldier_1";
+		fsl_2 = "CPC_LAT_B_EJE_soldier_light";
+		fsl_3 = "CPC_LAT_B_EJE_soldier_1";
+		lat = "CPC_LAT_B_EJE_soldier_LAT";
+		at = "CPC_LAT_B_EJE_soldier_AT";
+		lmg = "CPC_LAT_B_EJE_soldier_GL";
+		mg = "CPC_LAT_B_EJE_soldier_MG";
+		mark = "CPC_LAT_B_EJE_soldier_M";
+		gl = "CPC_LAT_B_EJE_soldier_GL";
+		tl = "CPC_LAT_B_EJE_soldier_TL";
+		sl = "CPC_LAT_B_EJE_soldier_Officer";
+		medic = "CPC_LAT_B_EJE_soldier_Medic";
+	};
+	class 7 //Chernarussian Movement of the Red Star
+	{
+		fsl_1 = "CUP_O_INS_Soldier";
+		fsl_2 = "CUP_O_INS_Soldier_AK74";
+		fsl_3 = "CUP_O_INS_Soldier_Exp";
+		lat = "CUP_O_INS_Soldier_LAT";
+		at = "CUP_O_INS_Soldier_AT";
+		lmg = "CUP_O_INS_Soldier_AR";
+		mg = "CUP_O_INS_Soldier_MG";
+		mark = "CUP_O_INS_Sniper";
+		gl = "CUP_O_INS_Soldier_GL";
+		tl = "CUP_O_INS_Officer";
+		sl = "CUP_O_INS_Commander";
+		medic = "CUP_O_INS_Medic";
 	};
 };

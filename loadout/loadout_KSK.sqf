@@ -209,6 +209,7 @@ hard_setLoadout = {
 		_primaryWeapon="CUP_arifle_HK417_20_Scope";
 		_pwOptic="CUP_optic_SB_11_4x20_PM";
 		_pwMagFirstAmmo=["CUP_20Rnd_762x51_HK417",20];
+		_itemsU=_itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1],["ACE_RangeCard",1]];
 		_itemsV=[["HandGrenade",2,1],["CUP_20Rnd_762x51_HK417",7,20]];
 		_binocCls="CUP_Vector21Nite";		
 		[_unit] call setLoadOut;

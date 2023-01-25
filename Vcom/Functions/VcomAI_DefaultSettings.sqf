@@ -37,8 +37,8 @@ Vcm_Settings =
 	VCM_WARNDIST = 1000; //How far AI can request help from other groups.
 	VCM_WARNDELAY = 30; //How long the AI have to survive before they can call in for support. This activates once the AI enter combat.
 	VCM_STATICARMT = 300; //How long AI stay on static weapons when initially arming them. This is just for AI WITHOUT static bags. They will stay for this duration when NO ENEMIES ARE SEEN, or their group gets FAR away.	
-	VCM_StealVeh = false; //Will the AI steal vehicles.
-	VCM_ClassSteal = false; //If true, crewmen are required to steal tracked vehicles. Pilots are required to steal aircraft. false = anyone can steal any vehicle.
+	VCM_StealVeh = true; //Will the AI steal vehicles.
+	VCM_ClassSteal = true; //If true, crewmen are required to steal tracked vehicles. Pilots are required to steal aircraft. false = anyone can steal any vehicle.
 	VCM_AIDISTANCEVEHPATH = 100; //Distance AI check from the squad leader to steal vehicles
 	VCM_ADVANCEDMOVEMENT = true; //True means AI will actively generate waypoints if no other waypoints are generated for the AI group (2 or more). False disables this advanced movements.
 	VCM_FRMCHANGE = true; //AI GROUPS WILL CHANGE FORMATIONS TO THEIR BEST GUESS.
@@ -51,8 +51,8 @@ Vcm_Settings =
 	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
 	Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
 	Vcm_PlayerAISkills = true; //AI in a group, that a players leads, can have their skills changed separately.
-	Vcm_GrenadeChance = 10; //Chance the AI will throw a grenade.
-	Vcm_SmokeChance = 10; //Chance the AI will throw a smoke grenade.
+	Vcm_GrenadeChance = 5; //Chance the AI will throw a grenade.
+	Vcm_SmokeChance = 5; //Chance the AI will throw a smoke grenade.
 	Vcm_AI_EM = true; //Will the AI use enhanced movement to navigate around.
 	Vcm_AI_EM_CHN = 10; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
 	VCM_AI_EM_CLDWN = 10; //Time in seconds before a group will consider jumping over obstacles;
@@ -62,7 +62,7 @@ Vcm_Settings =
 	//VCM_AIDIFA = [['aimingAccuracy',0.15],['aimingShake',0.1],['aimingSpeed',0.25],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
 		
 	//MEDIUM DIFFICULTY
-	VCM_AIDIFA = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];
+	VCM_AIDIFA = [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.75],['spotTime',0.55]];
 	
 	//HIGH DIFFICULTY
 	//VCM_AIDIFA = [['aimingAccuracy',0.35],['aimingShake',0.4],['aimingSpeed',0.45],['commanding',1],['courage',1],['endurance',1],['general',0.5],['reloadSpeed',1],['spotDistance',0.8],['spotTime',0.8]];
@@ -76,7 +76,6 @@ Vcm_Settings =
 	VCM_PSQUADW= [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];	
 	VCM_PSQUADE= [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];	
 	VCM_PSQUADR= [['aimingAccuracy',0.25],['aimingShake',0.15],['aimingSpeed',0.35],['commanding',0.85],['courage',0.5],['general',1],['reloadSpeed',1],['spotDistance',0.85],['spotTime',0.85]];	
-	
 	
 	VCM_AISIDESPEC =
 	{
@@ -102,12 +101,27 @@ Vcm_Settings =
 			}; 
 		};		
 	};
-	
-	
-	VCM_CLASSNAMESPECIFIC = false; //Do you want the AI to have classname specific skill settings?
+		
+	VCM_CLASSNAMESPECIFIC = true; //Do you want the AI to have classname specific skill settings?
 	VCM_SIDESPECIFICSKILL = false; //Do you want the AI to have side specific skill settings? This overrides classname specific skills.
 	VCM_SKILL_CLASSNAMES = []; //Here you can assign certain unit classnames to specific skill levels. This will override the AI skill level above.
-	
+	// Specific skills for marksmen
+	private _aimingAccuracy = 0.75;
+	private _aimingShake = 0.65;
+	private _spotDistance = 0.85;
+	private _spotTime = 0.85;
+	private _courage = 0.5;
+	private _commanding = 1;
+	private _aimingSpeed = 0.75;
+	private _general = 1;
+	private _endurance = 1;
+	private _reloadSpeed = 1;
+	private _skills = [_aimingAccuracy,_aimingShake,_spotDistance,_spotTime,_courage,_commanding,_aimingSpeed,_general,_endurance,_reloadSpeed];
+	private _classnames = ["CUP_B_CZ_Soldier_Marksman_WDL","CUP_B_BAF_Soldier_Marksman_MTP","CUP_O_sla_Sniper_KSVK","CUP_I_PMC_Sniper","CUP_B_US_Soldier_Marksman_EBR_OEFCP","CUP_O_INS_Sniper"];
+	{
+		VCM_SKILL_CLASSNAMES pushBack [_x,_skills];
+	} forEach _classnames;
+
 	/*
 	EXAMPLE FOR VCM_SKILL_CLASSNAMES
 	
@@ -118,7 +132,6 @@ Vcm_Settings =
 													]; 
 	
 	*/
-
 		
 	VCM_AIDIFSET =
 	{

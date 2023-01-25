@@ -2,9 +2,48 @@
 
 ## What is "Rush and hack"
 
-TODO
+### Core concept
+
+Rush and hack is a highly customizable, challenging and violent infantry combat mission. The basic concept is this: two factions rush at an objective to take control of valuable data. The duration of the rush is very short (about 5 minutes) before the first contact and a violent engagement. A typical "round" lasts about 20 to 30 minutes.
+
+### Customizable ?
+
+Many aspects are customizable, notably :
+
+* Many playable maps and many areas on these maps, allowing for a wide variety of tactical situations. One can choose the area to play on or let the game choose a random one
+* Player and enemy faction
+* Level of intel about objective
+* Balance of power
+* Various delay settings that allow for typical playing styles:
+  * Classical Rush and Hack: both sides start at the same time, and they need the same time to hack the data
+  * Defensive play: a long delay before the enemy leaves allows the player to take control of the area and wait for the enemy to arrive
+  * Offensive play: let enemies settle in, set a very long time limit for them to hack data, and build a patient plan of attack
+
+And many more !
+
+## Dependencies
+
+* CBA_A3
+* ACE
+* GDC_Lib (Lucy). See https://github.com/GdC-Framework/GdC_lib
 
 ## Changelog
+
+### v11, 25/01/2023
+
+#### Changed
+
+* VCom : less grenades and smokes, AI should steal vehicles, Marksmen should be (much) more efficient, all other AI should be a little bit less efficient
+
+#### Fixed
+
+* Nothing
+
+#### Added
+
+4 enemy factions (ION PMC, US Army, Ejercito, Chernarussian insurgents), 2 player factions (USMC, VDV)
+
+* New customizable value for intel on objective position : 400 m. area, 3 possible positions (default), exact position
 
 ### v10, 22/01/2023
 

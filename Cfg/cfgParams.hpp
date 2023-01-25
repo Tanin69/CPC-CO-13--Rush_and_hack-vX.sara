@@ -10,15 +10,15 @@ class params
 	class ENIFaction
 	{
 		title = "Choix de la faction ennemie";
-		texts[] = {"Czech Republic", "British Armed Forces", "Russes MSV", "Sahrani Army"};
-		values[] = {0,1,2,3};
+		texts[] = {"Czech Republic", "British Armed Forces", "Russes MSV", "Sahrani Liberation Army", "ION PMC", "US Army (OEF-CP)", "Ejercito", "Insurgés (Chernarussian)"};
+		values[] = {0,1,2,3,4,5,6,7};
 		default = 2;
 	};
 	class PlayersFaction
 	{
 		title = "Choix de la faction des joueurs";
-		texts[] = {"British Armed Forces", "KSK", "Armée française", "Czech Spec Ops"};
-		values[] = {1,2,3,4};
+		texts[] = {"British Armed Forces", "KSK", "Armée française", "Czech Spec Ops","USMC","Russes VDV (moderne)"};
+		values[] = {1,2,3,4,5,6};
 		default = 1;
 	};	
 	class ObjectiveIntelLevel

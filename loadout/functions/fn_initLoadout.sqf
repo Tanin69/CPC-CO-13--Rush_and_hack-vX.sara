@@ -9,6 +9,8 @@ switch (_playersFaction) do {
 	case 2: {_playersLoadout = "KSK"};
 	case 3: {_playersLoadout = "FR"};
 	case 4: {_playersLoadout = "CZ_SpecOp"};
+	case 5: {_playersLoadout = "USMC"};
+	case 6: {_playersLoadout = "VDV"};
 };
 
 call compile preprocessFileLineNumbers ("loadout\loadout_" + _playersLoadout + ".sqf");

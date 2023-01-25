@@ -225,8 +225,8 @@ hard_setLoadout = {
 		_pwPointer="acc_pointer_IR";
 		_pwOptic="optic_DMS";
 		_pwMagFirstAmmo=["CUP_20Rnd_762x51_HK417",20];
-		_itemsU  = _itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
-		_itemsV=[["CUP_18Rnd_9x19_Phantom",4,18],["SmokeShell",2,1],["CUP_HandGrenade_M67",2,1],["CUP_20Rnd_TE1_Green_Tracer_762x51_HK417",2,20],["CUP_20Rnd_762x51_HK417",5,20]];		
+		_itemsU  = _itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1],["ACE_RangeCard",1]];
+		_itemsV=[["CUP_18Rnd_9x19_Phantom",4,18],["SmokeShell",2,1],["CUP_HandGrenade_M67",2,1],["CUP_20Rnd_TE1_Green_Tracer_762x51_HK417",2,20],["CUP_20Rnd_762x51_HK417",5,20],["ACE_RangeCard",1]];		
 		[_unit] call setLoadOut;
 	};
 

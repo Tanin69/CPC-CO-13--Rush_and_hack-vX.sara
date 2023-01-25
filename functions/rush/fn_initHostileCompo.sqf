@@ -13,8 +13,6 @@
 	private _tl_ENI     	 = getText (missionConfigFile >> "factions" >> hostileFaction >> "tl");
 	private _sl_ENI     	 = getText (missionConfigFile >> "factions" >> hostileFaction >> "sl");
 	private _medic_ENI     	 = getText (missionConfigFile >> "factions" >> hostileFaction >> "medic");
-	
-	systemChat _fsl_ENI_1;
 
 /*******************************************/
 /*             IA GROUP DEF                */
