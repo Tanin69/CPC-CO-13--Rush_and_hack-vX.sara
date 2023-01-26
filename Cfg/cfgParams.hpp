@@ -1,12 +1,8 @@
 class params
 {
-	class CombatZone
-	{
-		title = "Choix de la zone de combat";
-		texts[] = {"Aléatoire (défaut)", "Acorcha (désert)", "Bagango (carrière)", "Masbete (urbain)", "Obregan (urbain)", "Yoro (urbain)", "Eponia (urbain)", "Pesto (forêt)", "Benoma (forêt clairsemée)", "Tres Vales (vallée boisée et encaissée)"};
-		values[] = {0,1,2,3,4,5,6,7,8,9};
-		default = 0;
-	};
+	
+	#include "cfgParamCombatZone.hpp"
+	
 	class ENIFaction
 	{
 		title = "Choix de la faction ennemie";

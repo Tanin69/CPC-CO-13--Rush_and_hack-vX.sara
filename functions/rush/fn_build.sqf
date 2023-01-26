@@ -7,17 +7,19 @@ buildOK = false; //for synchronisation with init.sqf
 
 combatZone = "";
 private _chosenCombatZone = ["CombatZone"] call BIS_fnc_getParamValue;
+
+//Build combat zones array from config file
+private _configArr = [];
+private _configArrLong = "true" configClasses (missionConfigFile >> "CfgCombatZones");
+{
+	private _elArr = str(_x) splitString "/";
+	private _el = _elArr #((count _elArr)-1);
+	_configArr pushBack _el;	
+} forEach _configArrLong;
+
 switch (_chosenCombatZone) do {
-	case 0: {combatZone = selectRandom ["Acorcha","Bagango", "Masbete","Obregan","Yoro","Eponia","Pesto","Benoma","TresVales"]};
-	case 1: {combatZone = "Acorcha"};
-	case 2: {combatZone = "Bagango"};
-	case 3: {combatZone = "Masbete"};
-	case 4: {combatZone = "Obregan"};
-	case 5: {combatZone = "Yoro"};
-	case 6: {combatZone = "Eponia"};
-	case 7: {combatZone = "Pesto"};
-	case 8: {combatZone = "Benoma"};
-	case 9: {combatZone = "TresVales"};
+	case 0: {combatZone = selectRandom _configArr};
+	default {combatZone = _configArr#(_chosenCombatZone-1)};
 };
 
 /*Test only
@@ -53,6 +55,11 @@ publicVariable "combatZone";
 			_mrk setMarkerSize [200,200];
 			_mrk setMarkerColor "ColorOrange";
 			_mrk setMarkerAlpha 1;
+			for "_i" from 0 to (count _objectivePos) -2 do  {
+				_mrk = createMarker ["marker_objectif_" + str(_i+2),[(_objectivePos#_i)#0,(_objectivePos#_i)#1]];
+				_mrk setMarkerType "mil_unknown_noShadow";
+				_mrk setMarkerAlpha 0;
+			};
 		};
 		case 2: {
 			for "_i" from 0 to (count _objectivePos) -1 do  {
@@ -65,6 +72,11 @@ publicVariable "combatZone";
 			_mrk = createMarker ["marker_objectif_1",[objectivePos#0,objectivePos#1,0]];
 			_mrk setMarkerType "mil_objective_noShadow";
 			_mrk setMarkerColor "ColorOrange";
+			for "_i" from 0 to (count _objectivePos) -2 do  {
+				_mrk = createMarker ["marker_objectif_" + str(_i+2),[(_objectivePos#_i)#0,(_objectivePos#_i)#1]];
+				_mrk setMarkerType "mil_unknown_noShadow";
+				_mrk setMarkerAlpha 0;
+			};
 		};
 	};
 	

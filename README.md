@@ -29,21 +29,21 @@ And many more !
 
 ## Changelog
 
-### v11, 25/01/2023
+### v11, 26/01/2023
 
 #### Changed
 
+* Separation between mission scripts and combat area configuration : no mission scripts need to be edited when adding new combat area
 * VCom : less grenades and smokes, AI should steal vehicles, Marksmen should be (much) more efficient, all other AI should be a little bit less efficient
 
 #### Fixed
 
-* Nothing
+* Wrong waypoints for some enemy groups when intel objective options "Area" or "Exact position" is chosen
 
 #### Added
 
-4 enemy factions (ION PMC, US Army, Ejercito, Chernarussian insurgents), 2 player factions (USMC, VDV)
-
-* New customizable value for intel on objective position : 400 m. area, 3 possible positions (default), exact position
+* 4 enemy factions (ION PMC, US Army, Ejercito, Chernarussian insurgents), 2 player factions (USMC, VDV)
+* New map : Livonia
 
 ### v10, 22/01/2023
 
