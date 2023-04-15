@@ -58,7 +58,7 @@ endFlag addAction
 	true,
 	true,
 	"",
-	"count (units player inAreaArray [position _target,20,20]) isEqualTo (count units player)", // _target, _this, _originalTarget
+	"count ((units player inAreaArray [position _target,20,20]) select {alive _x}) isEqualTo count (units player select {alive _x})", // _target, _this, _originalTarget
 	50,
 	false,
 	"",

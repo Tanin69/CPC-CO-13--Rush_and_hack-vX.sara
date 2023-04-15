@@ -48,14 +48,14 @@ class params
 	class ENIHackTimer
 	{
 		title = "Durée du hack ENI";
-		texts[] = {"5 min (Cours, Forest !)";"10 min (Y'a pas le feu au lac)";"20 min (La vengeance est un plat qui se mange froid)"};
+		texts[] = {"5 min (Cours, Forest !)","10 min (Y'a pas le feu au lac)","20 min (La vengeance est un plat qui se mange froid)"};
 		values[] = {300,600,1200};
 		default = 600;
 	};
 	class AMIHackTimer
 	{
 		title = "Durée du hack AMI";
-		texts[] = {"5 min (Prends l'oseille et tire-toi)";"10 min (Tu reprendras bien un verre ?)";"20 min (Fort Alamo)"};
+		texts[] = {"5 min (Prends l'oseille et tire-toi)","10 min (Tu reprendras bien un verre ?)","20 min (Fort Alamo)"};
 		values[] = {300,600,1200};
 		default = 600;
 	};

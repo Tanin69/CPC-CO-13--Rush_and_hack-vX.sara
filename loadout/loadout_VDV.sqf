@@ -12,7 +12,7 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* British Armed Forces CUP */
+/* Russes VDV modernes */
 
 hard_setLoadout = {
 
@@ -115,7 +115,7 @@ hard_setLoadout = {
 		_pwPointer="";
 		_pwOptic="";
 		_pwMagFirstAmmo=["CUP_30Rnd_545x39_AK74_plum_M",30];
-		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_itemsU=_itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
 		_itemsV=[["CUP_30Rnd_545x39_AK74_plum_M",8,30],["CUP_HandGrenade_RGD5",2,1]];
 		_binocCls="RangeFinder";		
 		[_unit] call setLoadOut;
@@ -126,7 +126,7 @@ hard_setLoadout = {
 		params["_unit"];
 		_primaryWeapon="CUP_arifle_AK74M_pso_open";
 		_pwOptic="CUP_optic_PSO_1_AK_open";
-		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_itemsU=_itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
 		_binocCls="Binocular";		
 		[_unit] call setLoadOut;
 	};
@@ -137,7 +137,7 @@ hard_setLoadout = {
 		_primaryWeapon="CUP_arifle_AK74M_GL_pso_open";
 		_pwOptic="CUP_optic_PSO_1_AK_open";
 		_pwMagSecondAmmo=["CUP_1Rnd_HE_GP25_M",1];
-		_itemsU=itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
+		_itemsU=_itemsU + [["ACRE_PRC148",1],["ACE_MicroDAGR",1]];
 		_itemsV=[["CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M",7,30],["CUP_HandGrenade_RGD5",2,1],["CUP_1Rnd_HE_GP25_M",9,1]];
 		_binocCls="Binocular";		
 		[_unit] call setLoadOut;

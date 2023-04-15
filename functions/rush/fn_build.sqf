@@ -46,7 +46,7 @@ publicVariable "combatZone";
 	//Objectives markers
 	private _objectiveIntelLvl = ["ObjectiveIntelLevel"] call BIS_fnc_getParamValue;
 	switch (_objectiveIntelLvl) do {
-		case 1: {
+		case 1: { //Intel = area with marker inside (random pos)
 			private _mrkCenter =  [[[objectivePos, 150]],[]] call BIS_fnc_randomPos;
 			systemChat str [objectivePos#0,objectivePos#1];
 			systemChat str _mrkCenter;
@@ -61,14 +61,14 @@ publicVariable "combatZone";
 				_mrk setMarkerAlpha 0;
 			};
 		};
-		case 2: {
+		case 2: { //Intel = 3 markers for possible position of the objective
 			for "_i" from 0 to (count _objectivePos) -1 do  {
 				_mrk = createMarker ["marker_objectif_" + str(_i+1),[(_objectivePos#_i)#0,(_objectivePos#_i)#1]];
 				_mrk setMarkerType "mil_unknown_noShadow";
 				_mrk setMarkerColor "ColorOrange";
 			};
 		};
-		case 3: {
+		case 3: { //Intel = exact position of the objective
 			_mrk = createMarker ["marker_objectif_1",[objectivePos#0,objectivePos#1,0]];
 			_mrk setMarkerType "mil_objective_noShadow";
 			_mrk setMarkerColor "ColorOrange";

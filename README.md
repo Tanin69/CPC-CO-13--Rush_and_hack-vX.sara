@@ -29,6 +29,22 @@ And many more !
 
 ## Changelog
 
+### v12, XX/XX/2023
+
+#### Changed
+
+* Quick hack to allow Sparfell to keep his eyes open during reinforcements paradrop ^^
+
+#### Fixed
+
+* Loadout code for new players factions was missing on Virolahti and Lingor maps
+* Typo for uniform items in VDV loadout
+* Condition in addAction on end flag didn't account for dead players
+
+#### Added
+
+* Two new combat areas on Sahrani (now Sahrani provides 11 different areas), three new combat areas on Livonia (now provides 11 combat areas)
+
 ### v11, 26/01/2023
 
 #### Changed
@@ -43,7 +59,7 @@ And many more !
 #### Added
 
 * 4 enemy factions (ION PMC, US Army, Ejercito, Chernarussian insurgents), 2 player factions (USMC, VDV)
-* New map : Livonia
+* New map : Livonia, with 8 combat areas configured
 
 ### v10, 22/01/2023
 

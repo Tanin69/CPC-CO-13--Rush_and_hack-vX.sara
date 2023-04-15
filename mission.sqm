@@ -8,22 +8,22 @@ class EditorData
 	toggles=1121;
 	class ItemIDProvider
 	{
-		nextID=3826;
+		nextID=3979;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1243;
+		nextID=1291;
 	};
 	class LayerIndexProvider
 	{
-		nextID=679;
+		nextID=747;
 	};
 	class Camera
 	{
-		pos[]={9379.418,359.11246,8980.0117};
-		dir[]={-0.48726001,-0.51858586,0.7025997};
-		up[]={-0.2955305,0.85502559,0.4261373};
-		aside[]={0.82172954,-2.9802322e-008,0.56987774};
+		pos[]={13288.272,31.48,9059.9219};
+		dir[]={-0.10566956,-0.69212455,0.71400118};
+		up[]={-0.10132822,0.72177804,0.68466705};
+		aside[]={0.98922521,0,0.14640172};
 	};
 };
 binarizationWanted=0;
@@ -624,12 +624,10 @@ class Mission
 		startWeather=0.20177804;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.60128289;
+		forecastWeather=0.79822189;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		wavesForced=1;
-		windForced=1;
 		year=2007;
 		month=6;
 		day=7;
@@ -640,7 +638,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=21;
+		items=23;
 		class Item0
 		{
 			dataType="Logic";
@@ -8610,6 +8608,1258 @@ class Mission
 			};
 			id=3609;
 			atlOffset=0.57883453;
+		};
+		class Item21
+		{
+			dataType="Layer";
+			name="R&H_PassoEpone";
+			class Entities
+			{
+				items=68;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={13808.505,313.63037,15803.487};
+					name="rah_PassoEpone_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3848;
+					atlOffset=-9.3726196;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13744.453,331.56104,15901.835};
+					name="rah_PassoEpone_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3849;
+					atlOffset=-2.1475525;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={13627.693,323.1123,15755.873};
+					name="rah_PassoEpone_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3850;
+					atlOffset=-11.654724;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={13793.96,303.49414,15794.883};
+					name="rah_PassoEpone_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3851;
+					atlOffset=-21.076569;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={13893.532,322.81055,15725.793};
+					name="rah_PassoEpone_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3852;
+					atlOffset=-0.99072266;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={13988.681,319.53906,15735.59};
+					name="rah_PassoEpone_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3853;
+					atlOffset=-5.5775452;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13051.872,367.25342,16195.131};
+					name="rah_PassoEpone_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					angle=130.07823;
+					id=3854;
+					atlOffset=-4.3650513;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={14494.73,420.31641,15324.85};
+					name="rah_PassoEpone_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=299.98767;
+					id=3855;
+					atlOffset=-13.194092;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={13154.863,398.65234,16064.92};
+					name="rah_PassoEpone_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3856;
+					atlOffset=-11.073547;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={13200.251,328.3244,16151.083};
+					name="rah_PassoEpone_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3857;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={13217.38,310.18344,16199.567};
+					name="rah_PassoEpone_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3858;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={13455.452,247.6958,16148.711};
+					name="rah_PassoEpone_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3859;
+					atlOffset=-18.816101;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={13288.457,322.32291,16093.572};
+					name="rah_PassoEpone_Spawn1_WP_5_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3860;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={14288.652,424.49219,15369.901};
+					name="rah_PassoEpone_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3861;
+					atlOffset=-10.627991;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={14323.98,393.85498,15450.983};
+					name="rah_PassoEpone_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3862;
+					atlOffset=-10.212341;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={14481.968,400.05945,15535.422};
+					name="rah_PassoEpone_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3863;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={14415.8,318.80957,15628.906};
+					name="rah_PassoEpone_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3864;
+					atlOffset=-8.9981995;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={13398.931,435.51611,15680.467};
+					name="rah_PassoEpone_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3866;
+					atlOffset=-3.2559509;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={13898.095,470.85779,15489.709};
+					name="rah_PassoEpone_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3867;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={11604.9,0,18045.561};
+					name="rah_PassoEpone_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3868;
+					atlOffset=4.8588324;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={19637.461,-123.95801,13805.656};
+					name="rah_PassoEpone_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3869;
+					atlOffset=-110.43357;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={13575.84,334.95642,15837.396};
+					name="rah_PassoEpone_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3870;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={13630.815,315.62598,15617.29};
+					name="rah_PassoEpone_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3871;
+					atlOffset=-5.1211853;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={14089.284,331.61816,15423.541};
+					name="rah_PassoEpone_Spawn2_WP_1_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3872;
+					atlOffset=-102.3472;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={13969.365,426.65381,15507.348};
+					name="rah_PassoEpone_Spawn2_WP_1_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3873;
+					atlOffset=-7.0391235;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={14086.313,366.10114,15489.591};
+					name="rah_PassoEpone_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3876;
+					atlOffset=-10.212036;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={13954.911,397.91583,15551.873};
+					name="rah_PassoEpone_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3877;
+					atlOffset=-10.212341;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={13875.158,313.74643,15665.045};
+					name="rah_PassoEpone_Spawn2_WP_2_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3878;
+					atlOffset=-10.212341;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={14278.476,319.84924,15607.319};
+					name="rah_PassoEpone_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3879;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={14118.213,306.66754,15675.679};
+					name="rah_PassoEpone_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3880;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={13983.014,324.69623,15756.19};
+					name="rah_PassoEpone_Spawn2_WP_3_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3881;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={14223.041,266.63663,15759.501};
+					name="rah_PassoEpone_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3882;
+					atlOffset=-8.9981995;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={14133.419,278.7001,15739.784};
+					name="rah_PassoEpone_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3883;
+					atlOffset=-8.9981995;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={14003.169,311.96921,15764.279};
+					name="rah_PassoEpone_Spawn2_WP_4_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3884;
+					atlOffset=-8.9981995;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={13880.686,307.57034,15813.871};
+					name="rah_PassoEpone_Spawn2_WP_4_5";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3885;
+					atlOffset=-8.9981995;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={13385.312,314.32578,15878.3};
+					name="rah_PassoEpone_Spawn2_paradrop_2";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3886;
+					atlOffset=-5.1211853;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={13425.562,309.57538,16005.044};
+					name="rah_PassoEpone_Spawn2_paradrop_3";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3887;
+					atlOffset=-5.1211853;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={13666.205,326.69797,16014.464};
+					name="rah_PassoEpone_Spawn2_paradrop_4";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3888;
+					atlOffset=-5.1211853;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={13673.912,333.31433,15875.73};
+					name="rah_PassoEpone_Spawn2_paradrop_5";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3889;
+					atlOffset=-5.1211853;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={13787.812,330.6438,15736.997};
+					name="rah_PassoEpone_Spawn2_paradrop_6";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3890;
+					atlOffset=-5.1211853;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={13923.976,315.25537,15661.635};
+					name="rah_PassoEpone_Spawn2_paradrop_7";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3891;
+					atlOffset=-5.1211853;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={13207.187,427.87149,16023.885};
+					name="rah_PassoEpone_Spawn1_WP_1_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3892;
+					atlOffset=-11.073547;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={13202.904,403.21127,15927.97};
+					name="rah_PassoEpone_Spawn1_WP_1_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3893;
+					atlOffset=-11.073547;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={13214.037,425.0842,15819.209};
+					name="rah_PassoEpone_Spawn1_WP_1_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3894;
+					atlOffset=-11.073547;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={13294.537,394.70428,15747.273};
+					name="rah_PassoEpone_Spawn1_WP_1_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3895;
+					atlOffset=-11.073547;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={13373.324,416.12418,15701.885};
+					name="rah_PassoEpone_Spawn1_WP_1_6";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3896;
+					atlOffset=-11.073547;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={13341.637,308.20038,16072.699};
+					name="rah_PassoEpone_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3897;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={13407.579,316.95547,15912.555};
+					name="rah_PassoEpone_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3898;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={13492.361,314.61942,15760.119};
+					name="rah_PassoEpone_Spawn1_WP_2_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3899;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={13328.793,296.33902,16150.63};
+					name="rah_PassoEpone_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3900;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={13424.707,294.12262,16059.854};
+					name="rah_PassoEpone_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3901;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={13547.169,334.45691,16021.316};
+					name="rah_PassoEpone_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3902;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={13620.818,331.94257,16008.469};
+					name="rah_PassoEpone_Spawn1_WP_3_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3903;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={13524.048,274.85165,16159.193};
+					name="rah_PassoEpone_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3904;
+					atlOffset=-18.816101;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={13632.808,266.9061,16117.23};
+					name="rah_PassoEpone_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3905;
+					atlOffset=-18.816101;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={13723.584,303.01831,16021.316};
+					name="rah_PassoEpone_Spawn1_WP_4_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3906;
+					atlOffset=-18.816101;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={13787.813,304.03268,15897.997};
+					name="rah_PassoEpone_Spawn1_WP_4_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3907;
+					atlOffset=-18.815521;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={13476.945,326.17029,15969.933};
+					name="rah_PassoEpone_Spawn1_WP_5_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3908;
+				};
+				class Item58
+				{
+					dataType="Marker";
+					position[]={13589.132,334.55786,15909.985};
+					name="rah_PassoEpone_Spawn1_WP_5_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3909;
+				};
+				class Item59
+				{
+					dataType="Marker";
+					position[]={13626.023,339.00345,15695.773};
+					name="rah_PassoEpone_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3910;
+				};
+				class Item60
+				{
+					dataType="Marker";
+					position[]={13764.757,331.57175,15712.046};
+					name="rah_PassoEpone_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3911;
+				};
+				class Item61
+				{
+					dataType="Marker";
+					position[]={13869.236,321.17505,15761.715};
+					name="rah_PassoEpone_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3912;
+				};
+				class Item62
+				{
+					dataType="Marker";
+					position[]={13785.311,328.74445,15851.636};
+					name="rah_PassoEpone_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3913;
+				};
+				class Item63
+				{
+					dataType="Marker";
+					position[]={13709.949,331.56125,15992.939};
+					name="rah_PassoEpone_Spawn1_paradrop_6";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3914;
+				};
+				class Item64
+				{
+					dataType="Marker";
+					position[]={13586.63,329.93707,16023.769};
+					name="rah_PassoEpone_Spawn1_paradrop_7";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3915;
+				};
+				class Item65
+				{
+					dataType="Marker";
+					position[]={13341.704,314.38525,15949.263};
+					name="rah_PassoEpone_Spawn1_paradrop_8";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3916;
+				};
+				class Item66
+				{
+					dataType="Marker";
+					position[]={13474.445,309.58969,15786.513};
+					name="rah_PassoEpone_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3917;
+					atlOffset=-5.5775452;
+				};
+				class Item67
+				{
+					dataType="Marker";
+					position[]={13569.834,328.04984,16014.377};
+					name="rah_PassoEpone_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3918;
+					atlOffset=-5.5775452;
+				};
+			};
+			id=3847;
+			atlOffset=-11.561371;
+		};
+		class Item22
+		{
+			dataType="Layer";
+			name="R&H_Corazol";
+			class Entities
+			{
+				items=59;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={13208.081,19.485001,8858.0635};
+					name="rah_Corazol_combatZone";
+					markerType="ELLIPSE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=750;
+					b=750;
+					drawBorder=1;
+					id=3920;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13220.126,15.792969,8908.8496};
+					name="rah_Corazol_obj_1";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3921;
+					atlOffset=-3.6920319;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={13271.618,6.48,9093.207};
+					name="rah_Corazol_obj_2";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3922;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={13221.42,13.71419,8777.2266};
+					name="rah_Corazol_obj_3";
+					type="mil_unknown_noShadow";
+					colorName="ColorRed";
+					id=3923;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={13295.927,12.508237,8951.3291};
+					name="rah_Corazol_heavyWeapon";
+					type="o_armor";
+					colorName="ColorRed";
+					id=3924;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={12986.298,16.946289,8751.4873};
+					name="rah_Corazol_Extract_1";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3925;
+					atlOffset=-1.8887672;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={12787.218,37.790039,8190.2793};
+					name="rah_Corazol_Spawn1_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorBlack";
+					angle=36.011314;
+					id=3926;
+					atlOffset=-0.67976379;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={13768.812,24.668388,9410.9453};
+					name="rah_Corazol_Spawn2_Pos";
+					type="mil_start_noShadow";
+					colorName="ColorWhite";
+					angle=220.00012;
+					id=3927;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={12820.311,26.965603,8495.0479};
+					name="rah_Corazol_Spawn1_WP_1_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3928;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={13006.239,23.599121,8437.4785};
+					name="rah_Corazol_Spawn1_WP_2_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3929;
+					atlOffset=-2.0259914;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={13041.942,26.007324,8320.1123};
+					name="rah_Corazol_Spawn1_WP_3_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3930;
+					atlOffset=-2.2566624;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={12703.768,21.340235,8518.6914};
+					name="rah_Corazol_Spawn1_WP_4_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3931;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={12685.58,26.463226,8460.6084};
+					name="rah_Corazol_Spawn1_WP_5_1";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3932;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={13803.337,47.010742,8919.0313};
+					name="rah_Corazol_Spawn2_WP_1_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3933;
+					atlOffset=-5.063221;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={13669.68,21.375,9261.4082};
+					name="rah_Corazol_Spawn2_WP_2_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3934;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={13761.714,37.216278,8937.1104};
+					name="rah_Corazol_Spawn2_WP_3_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3935;
+				};
+				class Item16
+				{
+					dataType="Marker";
+					position[]={13465.404,34.961121,9345.2773};
+					name="rah_Corazol_Spawn2_WP_4_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3936;
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={13539.07,19.98,9264.7471};
+					name="rah_Corazol_Spawn2_WP_5_1";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3937;
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={12862.749,23.165527,8668.6182};
+					name="rah_Corazol_Spawn1_POI_1";
+					type="loc_move";
+					colorName="ColorBlack";
+					id=3938;
+					atlOffset=-9.6148376;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={13493.107,19.98,8856.3193};
+					name="rah_Corazol_Spawn2_POI_1";
+					type="loc_move";
+					colorName="ColorWhite";
+					id=3939;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={12097.592,-6.965332,5915.0693};
+					name="rah_Corazol_Spawn1_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorBlack";
+					id=3940;
+					atlOffset=-6.122766;
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={14349.382,50.673622,11822.747};
+					name="rah_Corazol_Spawn2_HeliSpawnPos";
+					type="respawn_air";
+					colorName="ColorWhite";
+					id=3941;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={13101.379,9.4663086,8678.792};
+					name="rah_Corazol_Spawn1_paradrop_1";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3942;
+					atlOffset=-4.477437;
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={13074.053,21.505371,8454.5889};
+					name="rah_Corazol_Spawn2_paradrop_1";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3943;
+					atlOffset=-1.7246094;
+				};
+				class Item24
+				{
+					dataType="Marker";
+					position[]={13003.683,2.0712328,9051.9092};
+					name="rah_Corazol_Extract_2";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3944;
+					atlOffset=-1.8887672;
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={13474.475,18.091232,9165.4404};
+					name="rah_Corazol_Extract_3";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3945;
+					atlOffset=-1.8887672;
+				};
+				class Item26
+				{
+					dataType="Marker";
+					position[]={13559.334,2.1015348,8682.8213};
+					name="rah_Corazol_Extract_4";
+					type="mil_end_noShadow";
+					colorName="ColorRed";
+					id=3946;
+					atlOffset=-1.8584652;
+				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={13013.976,12.54734,8701.6055};
+					name="rah_Corazol_Spawn1_WP_2_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3947;
+					atlOffset=-2.0259914;
+				};
+				class Item28
+				{
+					dataType="Marker";
+					position[]={13118.393,16.841036,8814.7793};
+					name="rah_Corazol_Spawn1_WP_2_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3948;
+					atlOffset=-2.0259914;
+				};
+				class Item29
+				{
+					dataType="Marker";
+					position[]={13193.168,6.5873852,8556.7695};
+					name="rah_Corazol_Spawn1_WP_3_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3949;
+					atlOffset=-2.2566624;
+				};
+				class Item30
+				{
+					dataType="Marker";
+					position[]={13152.749,2.4310131,8632.8926};
+					name="rah_Corazol_Spawn1_WP_3_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3950;
+					atlOffset=-2.2566624;
+				};
+				class Item31
+				{
+					dataType="Marker";
+					position[]={13269.965,9.0739746,8719.7939};
+					name="rah_Corazol_Spawn1_WP_3_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3951;
+					atlOffset=-2.2566624;
+				};
+				class Item32
+				{
+					dataType="Marker";
+					position[]={12688.6,25.913029,8659.8389};
+					name="rah_Corazol_Spawn1_WP_4_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3952;
+				};
+				class Item33
+				{
+					dataType="Marker";
+					position[]={12773.481,18.539888,8813.4316};
+					name="rah_Corazol_Spawn1_WP_4_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3953;
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={12883.287,16.156574,8915.8281};
+					name="rah_Corazol_Spawn1_WP_4_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3954;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={13042.271,10.10245,8989.9326};
+					name="rah_Corazol_Spawn1_WP_4_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3955;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={12803.799,23.051849,8660.5166};
+					name="rah_Corazol_Spawn1_WP_5_2";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3956;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={12861.06,19.616302,8810.0684};
+					name="rah_Corazol_Spawn1_WP_5_3";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3957;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={12925.057,17.789095,8890.9063};
+					name="rah_Corazol_Spawn1_WP_5_4";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3958;
+				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={13139.278,15.803912,8936.041};
+					name="rah_Corazol_Spawn1_WP_5_5";
+					type="waypoint";
+					colorName="ColorBlack";
+					id=3959;
+				};
+				class Item40
+				{
+					dataType="Marker";
+					position[]={12933.271,7.2503128,8962.0234};
+					name="rah_Corazol_Spawn1_paradrop_2";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3960;
+					atlOffset=-4.4774284;
+				};
+				class Item41
+				{
+					dataType="Marker";
+					position[]={13262.657,12.960933,9324.627};
+					name="rah_Corazol_Spawn1_paradrop_3";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3961;
+					atlOffset=-4.477437;
+				};
+				class Item42
+				{
+					dataType="Marker";
+					position[]={13659.858,15.502563,8916.3525};
+					name="rah_Corazol_Spawn1_paradrop_4";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3962;
+					atlOffset=-4.4774361;
+				};
+				class Item43
+				{
+					dataType="Marker";
+					position[]={13737.362,13.010678,8700.4512};
+					name="rah_Corazol_Spawn1_paradrop_5";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3963;
+					atlOffset=-4.477437;
+				};
+				class Item44
+				{
+					dataType="Marker";
+					position[]={13237.746,12.923318,8481.7852};
+					name="rah_Corazol_Spawn1_paradrop_6";
+					type="loc_heli";
+					colorName="ColorBlack";
+					id=3964;
+					atlOffset=-4.477437;
+				};
+				class Item45
+				{
+					dataType="Marker";
+					position[]={13595.389,19.966211,9026.1279};
+					name="rah_Corazol_Spawn2_WP_2_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3965;
+				};
+				class Item46
+				{
+					dataType="Marker";
+					position[]={13519.508,19.98,8892.293};
+					name="rah_Corazol_Spawn2_WP_2_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3966;
+				};
+				class Item47
+				{
+					dataType="Marker";
+					position[]={13352.813,16.784298,8849.2754};
+					name="rah_Corazol_Spawn2_WP_2_4";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3967;
+					atlOffset=-0.00045776367;
+				};
+				class Item48
+				{
+					dataType="Marker";
+					position[]={13684.596,15.85815,8691.4727};
+					name="rah_Corazol_Spawn2_WP_3_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3968;
+					atlOffset=-9.5367432e-007;
+				};
+				class Item49
+				{
+					dataType="Marker";
+					position[]={13305.219,8.4439783,8706.0303};
+					name="rah_Corazol_Spawn2_WP_3_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3969;
+				};
+				class Item50
+				{
+					dataType="Marker";
+					position[]={13336.047,16.956951,9238.7021};
+					name="rah_Corazol_Spawn2_WP_4_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3970;
+				};
+				class Item51
+				{
+					dataType="Marker";
+					position[]={13361.739,10.399461,9112.8145};
+					name="rah_Corazol_Spawn2_WP_4_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3971;
+				};
+				class Item52
+				{
+					dataType="Marker";
+					position[]={13417.616,19.868544,9186.3379};
+					name="rah_Corazol_Spawn2_WP_5_2";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3972;
+				};
+				class Item53
+				{
+					dataType="Marker";
+					position[]={13250.686,6.7818909,9020.1943};
+					name="rah_Corazol_Spawn2_WP_5_3";
+					type="waypoint";
+					colorName="ColorWhite";
+					id=3973;
+				};
+				class Item54
+				{
+					dataType="Marker";
+					position[]={13675.079,19.229628,9122.5723};
+					name="rah_Corazol_Spawn2_paradrop_2";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3974;
+					atlOffset=-1.7246094;
+				};
+				class Item55
+				{
+					dataType="Marker";
+					position[]={13230.822,14.824503,9263.7383};
+					name="rah_Corazol_Spawn2_paradrop_3";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3975;
+					atlOffset=-1.7246094;
+				};
+				class Item56
+				{
+					dataType="Marker";
+					position[]={13356.766,10.501164,8948.1914};
+					name="rah_Corazol_Spawn2_paradrop_4";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3976;
+					atlOffset=-1.7246094;
+				};
+				class Item57
+				{
+					dataType="Marker";
+					position[]={12988.628,11.509377,8924.6631};
+					name="rah_Corazol_Spawn2_paradrop_5";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3977;
+					atlOffset=-1.7246094;
+				};
+				class Item58
+				{
+					dataType="Marker";
+					position[]={12883.445,23.983585,8653.4043};
+					name="rah_Corazol_Spawn2_paradrop_6";
+					type="loc_heli";
+					colorName="ColorWhite";
+					id=3978;
+					atlOffset=-1.7246094;
+				};
+			};
+			id=3919;
+			atlOffset=10.64374;
 		};
 	};
 };

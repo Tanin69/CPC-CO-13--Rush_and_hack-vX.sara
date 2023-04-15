@@ -25,7 +25,7 @@ private _grpPath = [];
 	grpDef = _grpDef;
 /* Difficulty management */
 
-//Delay before rush (player choice)
+//Delay before rush (player's choice)
 //_delayBeforeRush = 60;
 private _delayBeforeRush = ["DelayBeforeRush"] call BIS_fnc_getParamValue;
 if (_delayBeforeRush isEqualTo 1) then {_delayBeforeRush = random [0,300,600]};

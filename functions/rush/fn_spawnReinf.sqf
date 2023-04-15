@@ -5,8 +5,6 @@ private _delayBeforeRush = ["DelayBeforeRush"] call BIS_fnc_getParamValue;
 //Delay before rush (player choice) and other conditions (players arrived near the objective, etc.)
 waituntil { !(isNil "goRush") && (playerPresent) && !(isNil "timeGoRush") && {(time > (timeGoRush + _delayBeforeRush))}};
 
-systemChat "Enfin, les conditions pour que les renforts soient lancés sont réunies !";
-
 private _grpDef = grpDef;
 private _ENIside = opfor;
 private _AMIside = west;
@@ -15,6 +13,15 @@ private _grp = objNull;
 private _spawnPos = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "spawnPos");
 _spawnPos = _spawnPos#0;
 private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >> "SpawnPoints" >> "SpawnPoint_" + iAI >> "paths");
+//Choose the heli class to spawn
+private _soldier = _grpDef#0#0;
+private _CfgSide = getNumber (configFile >> "CfgVehicles" >> _soldier >> "side");
+private _heliClass = selectRandom ["CUP_O_Mi8AMT_RU","CUP_O_MI6T_RU","CUP_O_C47_SLA"];
+private _pilotClass = "CUP_O_RU_Pilot";
+if (_CfgSide isEqualTo 1) then {
+	_heliClass = selectRandom ["CUP_B_CH53E_USMC","CUP_B_CH53E_GER","CUP_B_Merlin_HC4_GB"];
+	_pilotClass = "CUP_B_USMC_Pilot";
+};
 
 /* Difficulty management */
 	//Reinforcements balance : few=every 5 min + random 3 min | medium= every 3 minutes + random 3 minutes | much= every 2 minutes + random 3 minutes
@@ -34,8 +41,6 @@ private _paths = getArray (missionConfigFile >> "cfgCombatZones" >> combatZone >
 
 //sleep 60;
 sleep (600 + random 120);
-
-systemChat "Ca devait arriver : la première vague de renfort est déclanchée";
 
 while {true} do {
 
@@ -72,7 +77,7 @@ while {true} do {
 				_paradropPos,
 				_heliSpawnPos,
 				opfor,
-				["CUP_O_Mi8AMT_RU","CUP_O_RU_Pilot", 150],
+				[_heliClass,_pilotClass, 250],
 				selectRandom _grpDef,
 				"FULL"
 			]  call GDC_fnc_lucySpawnGroupInfParadrop;
